@@ -1,0 +1,2822 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Namma Booth Bandu | ನಮ್ಮ ಬೂತ್ ಬಂಧು</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&family=Noto+Sans+Kannada:wght@400;500;600;700&family=Noto+Serif+Kannada:wght@600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --o1: #FF6600;
+      --o2: #E85000;
+      --o3: #C94000;
+      --gn: #138808;
+      --gnl: #e8f5e9;
+      --nv: #003087;
+      --nvl: #e8eef8;
+      --gd: #E8A020;
+      --gdl: #FDF3DC;
+      --gdd: #9A6500;
+      --tx: #18181B;
+      --mu: #6B7280;
+      --br: #E4E4E7;
+      --bg: #FAF8F5;
+      --wh: #fff;
+      --rd: 12px;
+      --rs: 8px;
+      --sh: 0 2px 14px rgba(0, 0, 0, .08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      background: var(--bg);
+      color: var(--tx);
+      line-height: 1.7;
+      font-size: 15px
+    }
+
+    body.kn {
+      font-family: 'Noto Sans Kannada', sans-serif
+    }
+
+    h1,
+    h2,
+    h3,
+    .st {
+      font-family: 'Playfair Display', serif
+    }
+
+    body.kn h1,
+    body.kn h2,
+    body.kn h3,
+    body.kn .st {
+      font-family: 'Noto Serif Kannada', serif
+    }
+
+    /* LANG */
+    .lpill {
+      display: flex;
+      background: rgba(255, 255, 255, .12);
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, .3);
+      overflow: hidden
+    }
+
+    .lb {
+      padding: 5px 13px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: rgba(255, 255, 255, .75);
+      letter-spacing: .5px;
+      transition: all .2s
+    }
+
+    .lb.kn {
+      font-family: 'Noto Sans Kannada', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0
+    }
+
+    .lb.on {
+      background: #fff;
+      color: var(--o1);
+      border-radius: 20px
+    }
+
+    /* HEADER */
+    .hdr {
+      background: linear-gradient(100deg, #FF6600 0%, #CC3300 45%, #1a1a2e 100%);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 3px 24px rgba(0, 0, 0, .35)
+    }
+
+    .hdr-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px
+    }
+
+    .lzone {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 1;
+      min-width: 0
+    }
+
+    .lotus-wrapper {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.12);
+      /* same as SVG circle */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lotus {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      transform: scale(1.2);
+      /* zoom in */
+    }
+
+    .brand {
+      min-width: 0
+    }
+
+    .brand h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis
+    }
+
+    body.kn .brand h1 {
+      font-family: 'Noto Serif Kannada', serif;
+      font-size: 15px
+    }
+
+    .brand p {
+      font-size: 11px;
+      opacity: .8;
+      white-space: nowrap;
+      font-family: 'Noto Sans Kannada', sans-serif;
+      color: #fff
+    }
+
+    .hdr-r {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0
+    }
+
+    .hbur {
+      display: none;
+      background: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      padding: 4px
+    }
+
+    /* NAV */
+    .nav {
+      background: rgba(0, 0, 0, .28);
+      border-top: 1px solid rgba(255, 255, 255, .1)
+    }
+
+    .nav ul {
+      display: flex;
+      list-style: none;
+      padding: 0 14px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      gap: 2px
+    }
+
+    .nav ul::-webkit-scrollbar {
+      display: none
+    }
+
+    .nav ul li a {
+      display: block;
+      color: rgba(255, 255, 255, .8);
+      text-decoration: none;
+      padding: 9px 13px;
+      font-size: 13px;
+      font-weight: 600;
+      border-bottom: 3px solid transparent;
+      transition: all .2s;
+      white-space: nowrap
+    }
+
+    body.kn .nav ul li a {
+      font-family: 'Noto Sans Kannada', sans-serif;
+      font-size: 12px;
+      padding: 9px 10px
+    }
+
+    .nav ul li a:hover,
+    .nav ul li a.on {
+      color: #fff;
+      border-bottom-color: var(--gd)
+    }
+
+    /* TICKER */
+    .tkr {
+      background: var(--gdl);
+      border-bottom: 2px solid var(--gd);
+      padding: 7px 0;
+      overflow: hidden
+    }
+
+    .tkr-in {
+      display: flex;
+      animation: roll 36s linear infinite;
+      width: max-content
+    }
+
+    .tkr-in span {
+      font-size: 13px;
+      color: var(--gdd);
+      font-weight: 600;
+      padding: 0 50px;
+      white-space: nowrap
+    }
+
+    body.kn .tkr-in span {
+      font-family: 'Noto Sans Kannada', sans-serif;
+      font-size: 12px
+    }
+
+    @keyframes roll {
+      0% {
+        transform: translateX(0)
+      }
+
+      100% {
+        transform: translateX(-50%)
+      }
+    }
+
+    /* PAGES */
+    .pg {
+      display: none
+    }
+
+    .pg.on {
+      display: block
+    }
+
+    /* MLA BANNER */
+    .mla {
+      background: linear-gradient(135deg, #1a1a2e 0%, #2d1a00 60%, #FF6600 100%);
+      padding: 28px 20px;
+      color: #fff
+    }
+
+    .mla-in {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap
+    }
+
+    .mla-pw {
+      position: relative;
+      flex-shrink: 0
+    }
+
+    .mla-ph {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 4px solid var(--gd);
+      box-shadow: 0 0 0 4px rgba(232, 160, 32, .25);
+      object-fit: cover;
+      display: block
+    }
+
+    .mla-lb {
+      position: absolute;
+      bottom: -2px;
+      right: -2px;
+      width: 30px;
+      height: 30px;
+      background: #FF6600;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #fff
+    }
+
+    .mla-inf {
+      flex: 1;
+      min-width: 200px
+    }
+
+    .mla-tag {
+      display: inline-block;
+      background: var(--gd);
+      color: #7A3900;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 12px;
+      border-radius: 12px;
+      margin-bottom: 8px;
+      letter-spacing: .5px
+    }
+
+    body.kn .mla-tag {
+      font-family: 'Noto Sans Kannada', sans-serif;
+      letter-spacing: 0
+    }
+
+    .mla-nm {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 4px
+    }
+
+    body.kn .mla-nm {
+      font-family: 'Noto Serif Kannada', serif;
+      font-size: 22px
+    }
+
+    .mla-co {
+      font-size: 14px;
+      color: rgba(255, 255, 255, .75);
+      margin-bottom: 12px
+    }
+
+    body.kn .mla-co {
+      font-family: 'Noto Sans Kannada', sans-serif
+    }
+
+    .mla-cs {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap
+    }
+
+    .mla-cp {
+      background: rgba(255, 255, 255, .12);
+      border: 1px solid rgba(255, 255, 255, .25);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: background .2s
+    }
+
+    .mla-cp:hover {
+      background: rgba(255, 255, 255, .25)
+    }
+
+    body.kn .mla-cp {
+      font-family: 'Noto Sans Kannada', sans-serif
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(160deg, #FFF2E8 0%, #E8F5E9 100%);
+      padding: 40px 20px 32px;
+      text-align: center;
+      border-bottom: 1px solid var(--br)
+    }
+
+    .hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--o3);
+      line-height: 1.2;
+      margin-bottom: 8px
+    }
+
+    body.kn .hero h2 {
+      font-family: 'Noto Serif Kannada', serif;
+      font-size: 24px
+    }
+
+    .hero h2 span {
+      color: var(--gn)
+    }
+
+    .hero p {
+      color: var(--mu);
+      font-size: 16px;
+      max-width: 580px;
+      margin: 0 auto 24px
+    }
+
+    body.kn .hero p {
+      font-family: 'Noto Sans Kannada', sans-serif;
+      font-size: 14px
+    }
+
+    .hstats {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-bottom: 28px
+    }
+
+    .si {
+      text-align: center
+    }
+
+    .sn {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--o1);
+      line-height: 1
+    }
+
+    .sl {
+      font-size: 12px;
+      color: var(--mu);
+      margin-top: 2px
+    }
+
+    body.kn .sl {
+      font-family: 'Noto Sans Kannada', sans-serif
+    }
+
+    .hcta {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap
+    }
+
+    /* BUTTONS */
+    .bp {
+      background: var(--o1);
+      color: #fff;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all .2s;
+      box-shadow: 0 4px 14px rgba(255, 102, 0, .35);
+      font-family: 'Source Sans 3', sans-serif;
+      letter-spacing: .3px
+    }
+
+    .bp:hover {
+      background: var(--o2);
+      transform: translateY(-1px)
+    }
+
+    .bs {
+      background: var(--gnl);
+      color: var(--gn);
+      border: 2px solid var(--gn);
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all .2s;
+      font-family: 'Source Sans 3', sans-serif
+    }
+
+    .bs:hover {
+      background: var(--gn);
+      color: #fff
+    }
+
+    .bsm {
+      padding: 7px 16px;
+      font-size: 13px;
+      border-radius: 6px
+    }
+
+    body.kn .bp,
+    body.kn .bs {
+      font-family: 'Noto Sans Kannada', sans-serif;
+      font-size: 13px
+    }
+
+    /* CONTAINER */
+    .con {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 16px
+    }
+
+    /* SECTION TITLES */
+    .st {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--tx);
+      margin-bottom: 4px
+    }
+
+    body.kn .st {
+      font-family: 'Noto Serif Kannada', serif;
+      font-size: 20px
+    }
+
+    .ss {
+      font-size: 13px;
+      color: var(--mu);
+      margin-bottom: 20px
+    }
+
+    body.kn .ss {
+      font-family: 'Noto Sans Kannada', sans-serif
+    }
+
+    /* BOOTH SELECTOR */
+    .bsel {
+      background: var(--wh);
+      border-radius: var(--rd);
+      padding: 18px 20px;
+      box-shadow: var(--sh);
+      margin-bottom: 24px;
+      border: 1px solid var(--br)
+    }
+
+    .bsel label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--mu);
+      text-transform: uppercase;
+      letter-spacing: .6px;
+      display: block;
+      margin-bottom: 8px
+    }
+
+    body.kn .bsel label {
+      font-family: 'Noto Sans Kannada', sans-serif;
+      text-transform: none;
+      letter-spacing: 0;
+      font-size: 13px
+    }
+
+    .brow {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap
+    }
+
+    .brow select {
+      flex: 1;
+      min-width: 180px;
+      padding: 10px 12px;
+      border: 2px solid var(--br);
+      border-radius: var(--rs);
+      font-size: 14px;
+      color: var(--tx);
+      background: var(--wh);
+      cursor: pointer;
+      font-family: inherit
+    }
+
+    .brow select:focus {
+      outline: none;
+      border-color: var(--o1)
+    }
+
+    body.kn .brow select {
+      font-family: 'Noto Sans Kannada', sans-serif
+    }
+
+    /* CARD GRID */
+    .cg {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 18px
+    }
+
+    /* EVENT CARD */
+    .ec {
+      background: var(--wh);
+      border-radius: var(--rd);
+      overflow: hidden;
+      box-shadow: var(--sh);
+      border: 1px solid var(--br);
+      transition: transform .2s, box-shadow .2s
+    }
+
+    .ec:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .12)
+    }
+
+    .ec-img {
+      height: 130px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      position: relative;
+      background: linear-gradient(135deg, rgba(255, 102, 0, .07), rgba(19, 136, 8, .07))
+    }
+
+    .bb {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: var(--o1);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 6px
+    }
+
+    body.kn .bb {
+      font-family: 'Noto Sans Kannada', sans-serif
+    }
+
+    .ec-bd {
+      padding: 16px
+    }
+
+    .ec-bd h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 5px;
+      color: var(--tx);
+      line-height: 1.3
+    }
+
+    body.kn .ec-bd h3 {
+      font-family: 'Noto Serif Kannada', serif;
+      font-size: 14px
+    }
+
+    .ec-bd p {
+      font-size: 13px;
+      color: var(--mu);
+      margin-bottom: 10px;
+      line-height: 1.5
+    }
+
+    body.kn .ec-bd p {
+      font-family: 'Noto Sans Kannada', sans-serif
+    }
+
+    .em {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap
+    }
+
+    .mt {
+      font-size: 11px;
+      padding: 3px 9px;
+      border-radius: 5px;
+      font-weight: 600
+    }
+
+    body.kn .mt {
+      font-family: 'Noto Sans Kannada', sans-serif
+    }
+
+    .mtd {
+      background: var(--nvl);
+      color: var(--nv)
+    }
+
+    .mtv {
+      background: var(--gnl);
+      color: var(--gn)
+    }
+
+    .mtt {
+      background: var(--gdl);
+      color: var(--gdd)
+    }
+
+    /* JOB TABS */
+    .jtabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+      flex-wrap: wrap
+    }
+
+    .jtb {
+      padding: 7px 18px;
+      border: 2px solid var(--br);
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      background: var(--wh);
+      color: var(--mu);
+      transition: all .2s;
+      font-family: 'Source Sans 3', sans-serif
+    }
+
+    .jtb.on {
+      background: var(--o1);
+      border-color: var(--o1);
+      color: #fff
+    }
+
+    body.kn .jtb {
+      font-family: 'Noto Sans Kannada', sans-serif;
+      font-size: 12px
+    }
+
+    /* JOB CARD */
+    .jc {
+      background: var(--wh);
+      border-radius: var(--rd);
+      padding: 18px;
+      box-shadow: var(--sh);
+      border: 1px solid var(--br);
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      transition: transform .2s
+    }
+
+    .jc:hover {
+      transform: translateY(-2px)
+    }
+
+    .ji {
+      width: 52px;
+      height: 52px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(255, 102, 0, .12), rgba(255, 102, 0, .25));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      flex-shrink: 0
+    }
+
+    .jinfo {
+      flex: 1;
+      min-width: 0
+    }
+
+    .jinfo h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 3px;
+      line-height: 1.2
+    }
+
+    body.kn .jinfo h3 {
+      font-family: 'Noto Serif Kannada', serif;
+      font-size: 14px
+    }
+
+    .jco {
+      font-size: 13px;
+      color: var(--mu);
+      margin-bottom: 6px
+    }
+
+    body.kn .jco {
+      font-family: 'Noto Sans Kannada', sans-serif
+    }
+
+    .jtypb {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 5px;
+      margin-bottom: 8px
+    }
+
+    .jt-f {
+      background: #fff0e6;
+      color: #C44400
+    }
+
+    .jt-p {
+      background: #e8f5e9;
+      color: #1B6B2E
+    }
+
+    .jt-d {
+      background: #e8eef8;
+      color: #1A4F9C
+    }
+
+    body.kn .jtypb {
+      font-family: 'Noto Sans Kannada', sans-serif
+    }
+
+    .jdet {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin-bottom: 10px
+    }
+
+    .jdi {
+      font-size: 12px;
+      color: var(--mu);
+      display: flex;
+      align-items: flex-start;
+      gap: 4px
+    }
+
+    body.kn .jdi {
+      font-family: 'Noto Sans Kannada', sans-serif
+    }
+
+    .jact {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap
+    }
+
+    .abtn {
+      background: var(--o1);
+      color: #fff;
+      border: none;
+      padding: 7px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: 'Source Sans 3', sans-serif;
+      transition: background .2s
+    }
+
+    .abtn:hover {
+      background: var(--o2)
+    }
+
+    .cbtn {
+      background: var(--gnl);
+      color: var(--gn);
+      border: 2px solid var(--gn);
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: 'Source Sans 3', sans-serif;
+      transition: all .2s
+    }
+
+    .cbtn:hover {
+      background: var(--gn);
+      color: #fff
+    }
+
+    body.kn .abtn,
+    body.kn .cbtn {
+      font-family: 'Noto Sans Kannada', sans-serif;
+      font-size: 12px
+    }
+
+    /* LOCATION */
+    .lg {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px
+    }
+
+    .lc {
+      background: var(--wh);
+      border-radius: var(--rd);
+      padding: 18px;
+      box-shadow: var(--sh);
+      border: 1px solid var(--br);
+      border-left: 4px solid var(--o1);
+      transition: transform .2s
+    }
+
+    .lc:hover {
+      transform: translateY(-2px)
+    }
+
+    .lh {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px
+    }
+
+    .lic {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0
+    }
+
+    .ih {
+      background: #ffe8e8
+    }
+
+    .ip {
+      background: #e8eef8
+    }
+
+    .is {
+      background: #fff0e6
+    }
+
+    .iw {
+      background: #e0f7fa
+    }
+
+    .if {
+      background: #ffe8e8
+    }
+
+    .ipo {
+      background: #f3e8ff
+    }
+
+    .icv {
+      background: #e8f5e9
+    }
+
+    .ib {
+      background: #fff8e1
+    }
+
+    .lnm {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--tx)
+    }
+
+    body.kn .lnm {
+      font-family: 'Noto Serif Kannada', serif;
+      font-size: 14px
+    }
+
+    .ltp {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--o1);
+      text-transform: uppercase;
+      letter-spacing: .4px
+    }
+
+    body.kn .ltp {
+      font-family: 'Noto Sans Kannada', sans-serif;
+      text-transform: none;
+      letter-spacing: 0
+    }
+
+    .ld p {
+      font-size: 12px;
+      color: var(--mu);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: flex-start;
+      gap: 5px
+    }
+
+    body.kn .ld p {
+      font-family: 'Noto Sans Kannada', sans-serif
+    }
+
+    .ld a {
+      font-size: 12px;
+      color: var(--nv);
+      text-decoration: none;
+      font-weight: 600
+    }
+
+    .ld a:hover {
+      color: var(--o1)
+    }
+
+    .lop {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-top: 6px
+    }
+
+    .lo247 {
+      background: #e8eef8;
+      color: #1A4F9C
+    }
+
+    .loopen {
+      background: #e8f5e9;
+      color: #1B6B2E
+    }
+
+    /* FORM */
+    .fc {
+      background: var(--wh);
+      border-radius: var(--rd);
+      padding: 24px;
+      box-shadow: var(--sh);
+      border: 1px solid var(--br)
+    }
+
+    .fg2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px
+    }
+
+    @media(max-width:560px) {
+      .fg2 {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .fg {
+      display: flex;
+      flex-direction: column;
+      gap: 6px
+    }
+
+    .fgw {
+      grid-column: 1/-1
+    }
+
+    .fg label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--mu);
+      text-transform: uppercase;
+      letter-spacing: .5px
+    }
+
+    body.kn .fg label {
+      font-family: 'Noto Sans Kannada', sans-serif;
+      text-transform: none;
+      letter-spacing: 0;
+      font-size: 13px
+    }
+
+    .fg input,
+    .fg select,
+    .fg textarea {
+      border: 2px solid var(--br);
+      border-radius: var(--rs);
+      padding: 10px 12px;
+      font-size: 14px;
+      color: var(--tx);
+      font-family: 'Source Sans 3', sans-serif;
+      background: var(--wh);
+      transition: border-color .2s
+    }
+
+    body.kn .fg input,
+    body.kn .fg select,
+    body.kn .fg textarea {
+      font-family: 'Noto Sans Kannada', sans-serif
+    }
+
+    .fg input:focus,
+    .fg select:focus,
+    .fg textarea:focus {
+      outline: none;
+      border-color: var(--o1)
+    }
+
+    .fg textarea {
+      resize: vertical;
+      min-height: 84px
+    }
+
+    .ts {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap
+    }
+
+    .tsl {
+      padding: 7px 14px;
+      border: 2px solid var(--br);
+      border-radius: 6px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all .2s;
+      background: var(--wh);
+      color: var(--tx);
+      font-weight: 600;
+      font-family: 'Source Sans 3', sans-serif
+    }
+
+    .tsl.on {
+      background: var(--o1);
+      border-color: var(--o1);
+      color: #fff
+    }
+
+    body.kn .tsl {
+      font-family: 'Noto Sans Kannada', sans-serif;
+      font-size: 12px
+    }
+
+    .sr {
+      margin-top: 20px;
+      display: flex;
+      justify-content: flex-end
+    }
+
+    .toast {
+      display: none;
+      background: var(--gnl);
+      border: 2px solid var(--gn);
+      color: var(--gn);
+      padding: 14px 18px;
+      border-radius: var(--rs);
+      font-size: 14px;
+      font-weight: 700;
+      margin-top: 14px;
+      text-align: center
+    }
+
+    body.kn .toast {
+      font-family: 'Noto Sans Kannada', sans-serif
+    }
+
+    /* ADMIN */
+    .aw {
+      max-width: 460px;
+      margin: 0 auto;
+      background: var(--wh);
+      border-radius: var(--rd);
+      padding: 36px 32px;
+      box-shadow: var(--sh);
+      border: 1px solid var(--br);
+      text-align: center
+    }
+
+    @media(max-width:480px) {
+      .aw {
+        padding: 24px 14px
+      }
+    }
+
+    .aico {
+      font-size: 52px;
+      margin-bottom: 12px
+    }
+
+    .aw h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 6px
+    }
+
+    body.kn .aw h2 {
+      font-family: 'Noto Serif Kannada', serif
+    }
+
+    .aw>p {
+      font-size: 14px;
+      color: var(--mu);
+      margin-bottom: 20px
+    }
+
+    body.kn .aw>p {
+      font-family: 'Noto Sans Kannada', sans-serif
+    }
+
+    .rtbs {
+      display: flex;
+      background: var(--bg);
+      border-radius: var(--rs);
+      padding: 4px;
+      margin-bottom: 20px;
+      gap: 4px
+    }
+
+    .rtb {
+      flex: 1;
+      padding: 8px;
+      border: none;
+      background: none;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      color: var(--mu);
+      transition: all .2s;
+      font-family: 'Source Sans 3', sans-serif
+    }
+
+    .rtb.on {
+      background: var(--o1);
+      color: #fff
+    }
+
+    body.kn .rtb {
+      font-family: 'Noto Sans Kannada', sans-serif
+    }
+
+    .ahint {
+      font-size: 12px;
+      color: var(--mu);
+      margin-bottom: 14px;
+      text-align: left;
+      background: var(--bg);
+      padding: 8px 12px;
+      border-radius: var(--rs)
+    }
+
+    body.kn .ahint {
+      font-family: 'Noto Sans Kannada', sans-serif
+    }
+
+    /* DASH */
+    .dash {
+      display: none
+    }
+
+    .dash.on {
+      display: block
+    }
+
+    .dh {
+      background: var(--wh);
+      border-radius: var(--rd);
+      padding: 18px 22px;
+      box-shadow: var(--sh);
+      border: 1px solid var(--br);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      border-left: 5px solid var(--o1)
+    }
+
+    .dh h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 800
+    }
+
+    body.kn .dh h2 {
+      font-family: 'Noto Serif Kannada', serif;
+      font-size: 18px
+    }
+
+    .dh p {
+      font-size: 13px;
+      color: var(--mu)
+    }
+
+    body.kn .dh p {
+      font-family: 'Noto Sans Kannada', sans-serif
+    }
+
+    .srow {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px
+    }
+
+    .sc {
+      background: var(--wh);
+      border-radius: var(--rd);
+      padding: 16px;
+      box-shadow: var(--sh);
+      border: 1px solid var(--br);
+      text-align: center
+    }
+
+    .sc .num {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--o1);
+      line-height: 1
+    }
+
+    .sc .lbl {
+      font-size: 12px;
+      color: var(--mu);
+      margin-top: 4px
+    }
+
+    body.kn .sc .lbl {
+      font-family: 'Noto Sans Kannada', sans-serif
+    }
+
+    /* ADMIN SECTION TABS */
+    .atabs {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 20px
+    }
+
+    .atb {
+      padding: 8px 16px;
+      border: 2px solid var(--br);
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      background: var(--wh);
+      color: var(--mu);
+      font-family: 'Source Sans 3', sans-serif;
+      transition: all .2s
+    }
+
+    .atb.on {
+      background: var(--o1);
+      border-color: var(--o1);
+      color: #fff
+    }
+
+    body.kn .atb {
+      font-family: 'Noto Sans Kannada', sans-serif;
+      font-size: 12px
+    }
+
+    .asec {
+      display: none
+    }
+
+    .asec.on {
+      display: block
+    }
+
+    /* TABLE */
+    .tw {
+      background: var(--wh);
+      border-radius: var(--rd);
+      padding: 20px;
+      box-shadow: var(--sh);
+      border: 1px solid var(--br);
+      margin-bottom: 20px;
+      overflow-x: auto
+    }
+
+    .tw h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 14px
+    }
+
+    body.kn .tw h3 {
+      font-family: 'Noto Serif Kannada', serif
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      min-width: 480px
+    }
+
+    th {
+      text-align: left;
+      padding: 9px 12px;
+      background: var(--bg);
+      color: var(--mu);
+      font-weight: 700;
+      border-bottom: 2px solid var(--br);
+      white-space: nowrap
+    }
+
+    body.kn th {
+      font-family: 'Noto Sans Kannada', sans-serif
+    }
+
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--br);
+      color: var(--tx);
+      vertical-align: middle
+    }
+
+    body.kn td {
+      font-family: 'Noto Sans Kannada', sans-serif
+    }
+
+    tr:last-child td {
+      border-bottom: none
+    }
+
+    .sb {
+      padding: 3px 10px;
+      border-radius: 5px;
+      font-size: 11px;
+      font-weight: 700
+    }
+
+    .snw {
+      background: var(--nvl);
+      color: var(--nv)
+    }
+
+    .sco {
+      background: var(--gdl);
+      color: var(--gdd)
+    }
+
+    .sre {
+      background: var(--gnl);
+      color: var(--gn)
+    }
+
+    body.kn .sb {
+      font-family: 'Noto Sans Kannada', sans-serif
+    }
+
+    /* SA TABS */
+    .satabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding-bottom: 4px
+    }
+
+    .satabs::-webkit-scrollbar {
+      display: none
+    }
+
+    .satb {
+      flex-shrink: 0;
+      padding: 7px 16px;
+      border: 2px solid var(--br);
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      background: var(--wh);
+      color: var(--mu);
+      transition: all .2s;
+      white-space: nowrap;
+      font-family: 'Source Sans 3', sans-serif
+    }
+
+    .satb.on {
+      background: var(--o1);
+      border-color: var(--o1);
+      color: #fff
+    }
+
+    body.kn .satb {
+      font-family: 'Noto Sans Kannada', sans-serif;
+      font-size: 12px
+    }
+
+    .sac {
+      display: none
+    }
+
+    .sac.on {
+      display: block
+    }
+
+    /* BOOTH GRID */
+    .bg2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px
+    }
+
+    .bcard {
+      background: var(--wh);
+      border-radius: var(--rd);
+      padding: 16px;
+      box-shadow: var(--sh);
+      border: 2px solid var(--br);
+      cursor: pointer;
+      transition: all .2s
+    }
+
+    .bcard:hover {
+      border-color: var(--o1);
+      transform: translateY(-2px)
+    }
+
+    .bcard h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--o1);
+      margin-bottom: 3px
+    }
+
+    body.kn .bcard h4 {
+      font-family: 'Noto Serif Kannada', serif
+    }
+
+    .bcard .bn {
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--tx);
+      margin-bottom: 3px
+    }
+
+    body.kn .bcard .bn {
+      font-family: 'Noto Sans Kannada', sans-serif
+    }
+
+    .bcard p {
+      font-size: 12px;
+      color: var(--mu)
+    }
+
+    body.kn .bcard p {
+      font-family: 'Noto Sans Kannada', sans-serif
+    }
+
+    .bbar {
+      height: 4px;
+      background: var(--br);
+      border-radius: 2px;
+      margin-top: 10px;
+      overflow: hidden
+    }
+
+    .bfil {
+      height: 100%;
+      background: var(--o1);
+      border-radius: 2px
+    }
+
+    /* ADD CARD */
+    .adc {
+      background: linear-gradient(135deg, #fff8f5, #fff);
+      border-radius: var(--rd);
+      padding: 22px;
+      box-shadow: var(--sh);
+      border: 1px solid var(--br);
+      margin-bottom: 20px;
+      border-top: 4px solid var(--o1)
+    }
+
+    .adc h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--o3)
+    }
+
+    body.kn .adc h3 {
+      font-family: 'Noto Serif Kannada', serif
+    }
+
+    /* EMPTY */
+    .empty {
+      color: var(--mu);
+      font-size: 14px;
+      padding: 30px;
+      text-align: center;
+      grid-column: 1/-1
+    }
+
+    body.kn .empty {
+      font-family: 'Noto Sans Kannada', sans-serif
+    }
+
+    /* FOOTER */
+    footer {
+      background: #18181b;
+      color: rgba(255, 255, 255, .7);
+      padding: 36px 20px 20px;
+      margin-top: 48px
+    }
+
+    .fi {
+      max-width: 980px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 24px
+    }
+
+    footer h4 {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      font-family: 'Playfair Display', serif
+    }
+
+    body.kn footer h4 {
+      font-family: 'Noto Serif Kannada', serif
+    }
+
+    footer p,
+    footer a {
+      font-size: 13px;
+      color: rgba(255, 255, 255, .6);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 6px
+    }
+
+    body.kn footer p,
+    body.kn footer a {
+      font-family: 'Noto Sans Kannada', sans-serif
+    }
+
+    footer a:hover {
+      color: var(--o1)
+    }
+
+    .fb {
+      text-align: center;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, .1);
+      margin-top: 18px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, .35)
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:768px) {
+      .mla-in {
+        gap: 16px
+      }
+
+      .mla-ph {
+        width: 80px;
+        height: 80px
+      }
+
+      .mla-nm {
+        font-size: 20px
+      }
+
+      .hero h2 {
+        font-size: 24px
+      }
+
+      body.kn .hero h2 {
+        font-size: 19px
+      }
+
+      .sn {
+        font-size: 28px
+      }
+
+      .hbur {
+        display: block
+      }
+
+      .nav {
+        display: none
+      }
+
+      .nav.on {
+        display: block
+      }
+
+      .cg {
+        grid-template-columns: 1fr
+      }
+
+      .bg2 {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .srow {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .jdet {
+        grid-template-columns: 1fr
+      }
+    }
+
+    @media(max-width:480px) {
+      .brand h1 {
+        font-size: 13px
+      }
+
+      .lb {
+        padding: 4px 10px;
+        font-size: 11px
+      }
+
+      .mla {
+        padding: 20px 14px
+      }
+
+      .mla-ph {
+        width: 68px;
+        height: 68px
+      }
+
+      .mla-nm {
+        font-size: 17px
+      }
+
+      .bg2 {
+        grid-template-columns: 1fr
+      }
+
+      .hdr-top {
+        padding: 8px 12px
+      }
+
+      .hero h2 {
+        font-size: 20px
+      }
+
+      .aw {
+        margin: 0
+      }
+
+      .lg {
+        grid-template-columns: 1fr
+      }
+
+      .con {
+        padding: 20px 12px
+      }
+    }
+
+    @media(min-width:769px) and (max-width:1024px) {
+      .cg {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .bg2 {
+        grid-template-columns: repeat(3, 1fr)
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="hdr">
+    <div class="hdr-top">
+      <div class="lzone">
+        <div class="lotus-wrapper">
+          <img class="lotus" src="asset/images/BJP.png" alt="lotus">
+        </div>
+        <div class="brand">
+          <h1 id="bname">Namma Booth Bandu</h1>
+          <p>ನಮ್ಮ ಬೂತ್ ಬಂಧು – ರಾಜಾಜಿನಗರ</p>
+        </div>
+      </div>
+      <div class="hdr-r">
+        <div class="lpill">
+          <button class="lb on" onclick="setLang('en',this)">EN</button>
+          <button class="lb kn" onclick="setLang('kn',this)">ಕನ್ನಡ</button>
+        </div>
+        <button class="hbur" onclick="toggleNav()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M3 7H21M3 12H21M3 17H21" stroke="white" stroke-width="2.2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <nav class="nav" id="mainNav">
+      <ul id="navUl"></ul>
+    </nav>
+  </header>
+
+  <!-- TICKER -->
+  <div class="tkr">
+    <div class="tkr-in" id="tkrEl"></div>
+  </div>
+
+  <!-- ══ HOME ══ -->
+  <div id="pg-home" class="pg on">
+    <!-- MLA BANNER -->
+    <div class="mla">
+      <div class="mla-in">
+        <div class="mla-pw">
+          <img class="mla-ph" src="asset/images/photo.jpg" alt="profile">
+
+          <div class="mla-lb">
+            <svg width="16" height="16" viewBox="0 0 80 80" fill="none">
+              <ellipse cx="40" cy="48" rx="6" ry="10" fill="white" />
+              <ellipse cx="29" cy="46" rx="5" ry="9" transform="rotate(-20 29 46)" fill="white" opacity=".85" />
+              <ellipse cx="51" cy="46" rx="5" ry="9" transform="rotate(20 51 46)" fill="white" opacity=".85" />
+            </svg>
+          </div>
+        </div>
+        <div class="mla-inf">
+          <span class="mla-tag" id="mlaTag">🏛️ MLA – Rajajinagar Constituency</span>
+          <div class="mla-nm" id="mlaName">Sri. S. Suresh Kumar</div>
+          <div class="mla-co" id="mlaCo">Rajajinagar Constituency · Karnataka Legislative Assembly · BJP</div>
+          <div class="mla-cs">
+            <a class="mla-cp" href="tel:+918023456789">📞 <span id="mlaPhLbl">Office</span>: 080-2345-6789</a>
+            <a class="mla-cp" href="mailto:mla.rajajinagar@kar.gov.in">📧 mla.rajajinagar&#64;kar.gov.in</a>
+            <a class="mla-cp" href="#">🏛️ <span id="mlaOffLbl">Ward Office</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero">
+      <h2 id="heroT">Your Booth. Your Voice. <span>Your Ward.</span></h2>
+      <p id="heroD">Stay connected with events, jobs and your booth representative in Rajajinagar.</p>
+      <div class="hstats">
+        <div class="si">
+          <div class="sn">32</div>
+          <div class="sl" id="sB">Active Booths</div>
+        </div>
+        <div class="si">
+          <div class="sn">4,800+</div>
+          <div class="sl" id="sM">Members</div>
+        </div>
+        <div class="si">
+          <div class="sn">48</div>
+          <div class="sl" id="sE">Events This Month</div>
+        </div>
+        <div class="si">
+          <div class="sn">120+</div>
+          <div class="sl" id="sJ">Jobs Posted</div>
+        </div>
+      </div>
+      <div class="hcta">
+        <button class="bp" id="hB1" onclick="goPage('events')">📅 View Events</button>
+        <button class="bs" id="hB2" onclick="goPage('query')">📝 Submit Query</button>
+      </div>
+    </div>
+
+    <div class="con">
+      <div class="st" id="findT">📍 Find Your Booth</div>
+      <div class="ss" id="findS">Select your booth to see local events and updates</div>
+      <div class="bsel">
+        <label id="bselL">Select Booth Number</label>
+        <div class="brow">
+          <select id="homeSel" onchange="homeFilter()"></select>
+          <button class="bp bsm" id="hEvBtn" onclick="goPage('events')">View Events</button>
+        </div>
+      </div>
+      <div class="st" id="latT">🔥 Latest Events</div>
+      <div class="ss" id="latS">Recent activities from all booths</div>
+      <div class="cg" id="homeEv"></div>
+    </div>
+  </div>
+
+  <!-- ══ EVENTS ══ -->
+  <div id="pg-events" class="pg">
+    <div class="con">
+      <div class="st" id="evT">📅 Ward Events</div>
+      <div class="ss" id="evS">Filter events by booth</div>
+      <div class="bsel">
+        <label id="evBselL">Filter by Booth</label>
+        <div class="brow"><select id="evSel" onchange="renderEvents()"></select></div>
+      </div>
+      <div class="cg" id="evList"></div>
+    </div>
+  </div>
+
+  <!-- ══ JOBS ══ -->
+  <div id="pg-jobs" class="pg">
+    <div class="con">
+      <div class="st" id="jobT">💼 Job Opportunities</div>
+      <div class="ss" id="jobS">Full-time, Part-time &amp; One-Day Work for Rajajinagar residents</div>
+      <div class="jtabs" id="jobTabs"></div>
+      <div style="display:grid;gap:14px" id="jobList"></div>
+    </div>
+  </div>
+
+  <!-- ══ QUERY ══ -->
+  <div id="pg-query" class="pg">
+    <div class="con">
+      <div class="st" id="qT">📝 Submit Your Query</div>
+      <div class="ss" id="qS">Your booth admin will contact you at your preferred time</div>
+      <div class="fc">
+        <div class="fg2">
+          <div class="fg"><label id="qLN">Full Name *</label><input id="qN" type="text"
+              placeholder="Enter your full name"></div>
+          <div class="fg"><label id="qLM">Mobile Number *</label><input id="qM" type="tel"
+              placeholder="+91 XXXXX XXXXX"></div>
+          <div class="fg fgw"><label id="qLA">Full Address *</label><input id="qA" type="text"
+              placeholder="House No, Street, Area"></div>
+          <div class="fg"><label id="qLW">Ward / Block</label><input id="qW" type="text"
+              placeholder="e.g. Rajajinagar 3rd Block"></div>
+          <div class="fg"><label id="qLB">Select Booth *</label><select id="qBooth"></select></div>
+          <div class="fg"><label id="qLC">Category</label><select id="qCat"></select></div>
+          <div class="fg fgw"><label id="qLMg">Your Query *</label><textarea id="qMsg"
+              placeholder="Describe your query in detail..."></textarea></div>
+          <div class="fg fgw"><label id="qLT">Preferred Contact Time</label>
+            <div class="ts" id="tSlots"></div>
+          </div>
+        </div>
+        <div class="sr"><button class="bp" id="qSubmit" onclick="submitQuery()">Submit Query →</button></div>
+        <div class="toast" id="qToast"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ LOCATION ══ -->
+  <div id="pg-location" class="pg">
+    <div class="con">
+      <div class="st" id="locT">📍 Public Help Centers</div>
+      <div class="ss" id="locS">Government services and emergency contacts in Rajajinagar</div>
+      <div class="lg" id="locGrid"></div>
+    </div>
+  </div>
+
+  <!-- ══ BOOTHS ══ -->
+  <div id="pg-booths" class="pg">
+    <div class="con">
+      <div class="st" id="bthT">🗳️ All Booths – Rajajinagar</div>
+      <div class="ss" id="bthS">Click any booth to see its events</div>
+      <div class="bg2" id="boothGrid"></div>
+    </div>
+  </div>
+
+  <!-- ══ ADMIN ══ -->
+  <div id="pg-admin" class="pg">
+    <div class="con">
+      <!-- Login -->
+      <div id="admLogin">
+        <div class="aw">
+          <div class="aico">🔐</div>
+          <h2 id="admH">Admin Login</h2>
+          <p id="admP">Sign in as Booth Admin or Super Admin</p>
+          <div class="rtbs">
+            <button class="rtb on" id="rtB" onclick="setRole('booth',this)">Booth Admin</button>
+            <button class="rtb" id="rtS" onclick="setRole('super',this)">Super Admin</button>
+          </div>
+          <div class="fg" style="margin-bottom:12px;text-align:left">
+            <label id="admUL">Username</label>
+            <input type="text" id="aUser" placeholder="Enter username">
+          </div>
+          <div class="fg" style="margin-bottom:6px;text-align:left">
+            <label id="admPL">Password</label>
+            <input type="password" id="aPass" placeholder="Enter password">
+          </div>
+          <div class="ahint" id="admHint">Demo: booth / admin123 &nbsp;|&nbsp; super / super123</div>
+          <button class="bp" style="width:100%" id="admSign" onclick="doLogin()">Sign In →</button>
+        </div>
+      </div>
+
+      <!-- BOOTH ADMIN DASH -->
+      <div id="boothDash" class="dash">
+        <div class="dh">
+          <div>
+            <h2 id="baH">👤 Booth Admin – Booth 3</h2>
+            <p id="baP">Rajajinagar 3rd Block | Admin: Suresh Kumar</p>
+          </div>
+          <button class="bs bsm" id="baOut" onclick="doLogout()">Logout</button>
+        </div>
+        <div class="srow">
+          <div class="sc">
+            <div class="num">34</div>
+            <div class="lbl" id="baSt1">Members</div>
+          </div>
+          <div class="sc">
+            <div class="num">7</div>
+            <div class="lbl" id="baSt2">Events</div>
+          </div>
+          <div class="sc">
+            <div class="num">12</div>
+            <div class="lbl" id="baSt3">Queries</div>
+          </div>
+          <div class="sc">
+            <div class="num">3</div>
+            <div class="lbl" id="baSt4">Pending</div>
+          </div>
+        </div>
+        <div class="atabs" id="baTabs"></div>
+        <!-- Event section -->
+        <div id="ba-event" class="asec on">
+          <div class="adc">
+            <h3 id="baEvH">📤 Post New Event</h3>
+            <div class="fg2">
+              <div class="fg"><label id="baETL">Event Title</label><input type="text"
+                  placeholder="e.g. Water Issue Meeting"></div>
+              <div class="fg"><label id="baEDL">Date</label><input type="date"></div>
+              <div class="fg"><label id="baEVL">Venue</label><input type="text" placeholder="Community Hall"></div>
+              <div class="fg"><label id="baECL">Category</label><select id="baECat"></select></div>
+              <div class="fg fgw"><label id="baEDesc">Description</label><textarea
+                  placeholder="Describe the event..."></textarea></div>
+            </div>
+            <div class="sr"><button class="bp" id="baEvPost" onclick="admAction('event')">Post Event →</button></div>
+          </div>
+          <div class="tw">
+            <h3 id="baEvLH">📋 Events Posted</h3>
+            <table>
+              <thead>
+                <tr id="baEvTH"></tr>
+              </thead>
+              <tbody id="baEvTB"></tbody>
+            </table>
+          </div>
+        </div>
+        <!-- Job section -->
+        <div id="ba-job" class="asec">
+          <div class="adc">
+            <h3 id="baJobH">➕ Post New Job</h3>
+            <div class="fg2">
+              <div class="fg"><label id="baJTL">Job Title</label><input type="text" placeholder="e.g. Office Assistant">
+              </div>
+              <div class="fg"><label id="baJTyL">Type</label><select id="baJType"></select></div>
+              <div class="fg"><label id="baJCoL">Employer / Contact</label><input type="text"
+                  placeholder="Name or Company"></div>
+              <div class="fg"><label id="baJPhL">Contact Number</label><input type="tel" placeholder="+91 XXXXX XXXXX">
+              </div>
+              <div class="fg"><label id="baJSL">Pay / Salary</label><input type="text" placeholder="e.g. ₹500/day">
+              </div>
+              <div class="fg"><label id="baJLL">Location</label><input type="text" placeholder="Rajajinagar"></div>
+              <div class="fg fgw"><label id="baJDL">Details</label><textarea
+                  placeholder="Job details, requirements..."></textarea></div>
+            </div>
+            <div class="sr"><button class="bp" id="baJobPost" onclick="admAction('job')">Post Job →</button></div>
+          </div>
+        </div>
+        <!-- Query section -->
+        <div id="ba-query" class="asec">
+          <div class="adc">
+            <h3 id="baPQH">📝 Add Query on Behalf of Public</h3>
+            <div class="fg2">
+              <div class="fg"><label id="baQNL">Citizen Name</label><input type="text" placeholder="Full name"></div>
+              <div class="fg"><label id="baQML">Mobile</label><input type="tel" placeholder="+91 XXXXX XXXXX"></div>
+              <div class="fg fgw"><label id="baQAL">Address</label><input type="text" placeholder="Full address"></div>
+              <div class="fg"><label id="baQCL">Category</label><select id="baQCat"></select></div>
+              <div class="fg fgw"><label id="baQMsgL">Query</label><textarea
+                  placeholder="Describe the issue..."></textarea></div>
+            </div>
+            <div class="sr"><button class="bp" id="baQAdd" onclick="admAction('query')">Add Query →</button></div>
+          </div>
+          <div class="tw">
+            <h3 id="baQLH">📋 Member Queries</h3>
+            <table>
+              <thead>
+                <tr id="baQTH"></tr>
+              </thead>
+              <tbody id="baQTB"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUPER ADMIN DASH -->
+      <div id="superDash" class="dash">
+        <div class="dh">
+          <div>
+            <h2 id="saH">🛡️ Super Admin Dashboard</h2>
+            <p id="saP">Rajajinagar Ward – Full Overview</p>
+          </div>
+          <button class="bs bsm" id="saOut" onclick="doLogout()">Logout</button>
+        </div>
+        <div class="srow">
+          <div class="sc">
+            <div class="num">32</div>
+            <div class="lbl" id="saSt1">Booths</div>
+          </div>
+          <div class="sc">
+            <div class="num">4,812</div>
+            <div class="lbl" id="saSt2">Members</div>
+          </div>
+          <div class="sc">
+            <div class="num">87</div>
+            <div class="lbl" id="saSt3">Queries</div>
+          </div>
+          <div class="sc">
+            <div class="num">148</div>
+            <div class="lbl" id="saSt4">Events</div>
+          </div>
+          <div class="sc">
+            <div class="num">23</div>
+            <div class="lbl" id="saSt5">Pending</div>
+          </div>
+          <div class="sc">
+            <div class="num">120</div>
+            <div class="lbl" id="saSt6">Jobs</div>
+          </div>
+        </div>
+        <div class="satabs" id="saTabs"></div>
+        <div id="sa-booths" class="sac on">
+          <div class="bg2" id="saBoothGrid"></div>
+        </div>
+        <div id="sa-queries" class="sac">
+          <div class="adc">
+            <h3 id="saPQH">📝 Add Query on Behalf of Public</h3>
+            <div class="fg2">
+              <div class="fg"><label id="saQNL">Citizen Name</label><input type="text" placeholder="Full name"></div>
+              <div class="fg"><label id="saQML">Mobile</label><input type="tel" placeholder="+91 XXXXX XXXXX"></div>
+              <div class="fg"><label id="saQBL">Booth</label><select id="saQBooth"></select></div>
+              <div class="fg"><label id="saQCL">Category</label><select id="saQCat"></select></div>
+              <div class="fg fgw"><label id="saQMsgL">Query</label><textarea
+                  placeholder="Describe the issue..."></textarea></div>
+            </div>
+            <div class="sr"><button class="bp" id="saQAdd" onclick="admAction('query')">Add Query →</button></div>
+          </div>
+          <div class="tw">
+            <h3 id="saQLH">All Member Queries</h3>
+            <table>
+              <thead>
+                <tr id="saQTH"></tr>
+              </thead>
+              <tbody id="saQTB"></tbody>
+            </table>
+          </div>
+        </div>
+        <div id="sa-events" class="sac">
+          <div class="adc">
+            <h3 id="saEvH">📤 Post Ward Event</h3>
+            <div class="fg2">
+              <div class="fg"><label id="saETL">Event Title</label><input type="text"
+                  placeholder="e.g. Ward Development Meeting"></div>
+              <div class="fg"><label id="saEDL">Date</label><input type="date"></div>
+              <div class="fg"><label id="saEBL">Booth / Ward</label><select id="saEBooth"></select></div>
+              <div class="fg"><label id="saECL">Category</label><select id="saECat"></select></div>
+              <div class="fg"><label id="saEVL">Venue</label><input type="text" placeholder="Venue name"></div>
+              <div class="fg fgw"><label id="saEDescL">Description</label><textarea
+                  placeholder="Event details..."></textarea></div>
+            </div>
+            <div class="sr"><button class="bp" id="saEvPost" onclick="admAction('event')">Post Event →</button></div>
+          </div>
+        </div>
+        <div id="sa-jobs" class="sac">
+          <div class="adc">
+            <h3 id="saJobH">➕ Post Job Opportunity</h3>
+            <div class="fg2">
+              <div class="fg"><label id="saJTL">Job Title</label><input type="text"
+                  placeholder="e.g. Junior Accountant"></div>
+              <div class="fg"><label id="saJTyL">Type</label><select id="saJType"></select></div>
+              <div class="fg"><label id="saJCoL">Company / Employer</label><input type="text"
+                  placeholder="Company name"></div>
+              <div class="fg"><label id="saJPhL">Contact Number</label><input type="tel" placeholder="+91 XXXXX XXXXX">
+              </div>
+              <div class="fg"><label id="saJSL">Pay / Salary</label><input type="text" placeholder="e.g. ₹20,000/month">
+              </div>
+              <div class="fg"><label id="saJLL">Location</label><input type="text" placeholder="Rajajinagar, Bengaluru">
+              </div>
+              <div class="fg fgw"><label id="saJDL">Description</label><textarea
+                  placeholder="Job roles, requirements..."></textarea></div>
+            </div>
+            <div class="sr"><button class="bp" id="saJobPost" onclick="admAction('job')">Post Job →</button></div>
+          </div>
+        </div>
+        <div id="sa-announce" class="sac">
+          <div class="adc">
+            <h3 id="saAnnH">📢 Ward Announcement</h3>
+            <div class="fg2">
+              <div class="fg fgw"><label id="saATL">Title</label><input type="text" placeholder="Announcement title...">
+              </div>
+              <div class="fg"><label id="saATGL">Target</label><select id="saAnnTgt"></select></div>
+              <div class="fg"><label id="saAPL">Priority</label><select id="saAnnPri"></select></div>
+              <div class="fg fgw"><label id="saAML">Message</label><textarea
+                  placeholder="Full announcement text..."></textarea></div>
+            </div>
+            <div class="sr"><button class="bp" id="saAnnSend" onclick="admAction('announce')">Send →</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="fi">
+      <div>
+        <h4 id="ftH">Namma Booth Bandu</h4>
+        <p id="ftP">Connecting citizens with booth representatives in Rajajinagar, Bengaluru.</p>
+      </div>
+      <div>
+        <h4 id="ftLinks">Quick Links</h4>
+        <a href="#" onclick="goPage('events');return false" id="ftEv">Events</a>
+        <a href="#" onclick="goPage('jobs');return false" id="ftJobs">Jobs</a>
+        <a href="#" onclick="goPage('query');return false" id="ftQ">Submit Query</a>
+        <a href="#" onclick="goPage('location');return false" id="ftLoc">Help Centers</a>
+        <a href="#" onclick="goPage('booths');return false" id="ftB">Booth Directory</a>
+      </div>
+      <div>
+        <h4 id="ftC">Ward Office Contact</h4>
+        <p>📍 Ward Office, Rajajinagar, Bengaluru – 560010</p>
+        <p>📞 080-XXXX-XXXX</p>
+        <p>📧 rajajinagar.ward&#64;bbmp.gov.in</p>
+      </div>
+    </div>
+    <div class="fb" id="ftCopy">© 2026 Namma Booth Bandu – Rajajinagar Ward · BJP | Community Empowerment Platform</div>
+  </footer>
+
+  <script>
+    /* ━━━━━━━━━━━━━━━━ DATA ━━━━━━━━━━━━━━━━ */
+    var BOOTHS = [
+      { n: '1', en: '1st Block', kn: '1ನೇ ಬ್ಲಾಕ್', aen: 'Nagesha R.', akn: 'ನಾಗೇಶ ಆರ್.', m: 142, ev: 5, q: 8 },
+      { n: '2', en: '2nd Block', kn: '2ನೇ ಬ್ಲಾಕ್', aen: 'Savitha M.', akn: 'ಸವಿತಾ ಎಂ.', m: 188, ev: 4, q: 11 },
+      { n: '3', en: '3rd Block', kn: '3ನೇ ಬ್ಲಾಕ್', aen: 'Suresh K.', akn: 'ಸುರೇಶ್ ಕೆ.', m: 165, ev: 7, q: 12 },
+      { n: '4', en: 'Nagapura', kn: 'ನಾಗಪುರ', aen: 'Ravi P.', akn: 'ರವಿ ಪಿ.', m: 130, ev: 3, q: 6 },
+      { n: '5', en: 'Vijayanagar', kn: 'ವಿಜಯನಗರ', aen: 'Deepa S.', akn: 'ದೀಪಾ ಎಸ್.', m: 210, ev: 6, q: 15 },
+      { n: '6', en: 'Chord Road', kn: 'ಕಾರ್ಡ್ ರಸ್ತೆ', aen: 'Mohan T.', akn: 'ಮೋಹನ್ ಟಿ.', m: 155, ev: 2, q: 7 },
+      { n: '7', en: 'Basaveshwara Nagar', kn: 'ಬಸವೇಶ್ವರ ನಗರ', aen: 'Arjun K.', akn: 'ಅರ್ಜುನ್ ಕೆ.', m: 198, ev: 8, q: 9 },
+      { n: '8', en: 'Mahalakshmi Layout', kn: 'ಮಹಾಲಕ್ಷ್ಮಿ ಲೇಔಟ್', aen: 'Kavitha B.', akn: 'ಕಾವ್ಯ ಬಿ.', m: 175, ev: 4, q: 10 }
+    ];
+
+    var EVENTS = [
+      { id: 1, b: '3', et: 'Water Supply Review Meeting', kt: 'ನೀರು ಸರಬರಾಜು ಪರಿಶೀಲನಾ ಸಭೆ', ed: 'Discussion on pipeline issues in 3rd Block.', kd: '3ನೇ ಬ್ಲಾಕ್‌ನ ಪೈಪ್‌ಲೈನ್ ಸಮಸ್ಯೆ ಚರ್ಚೆ.', edate: 'Mar 22, 2026', kdate: 'ಮಾ 22, 2026', ev: 'Community Hall, 3rd Block', kv: 'ಸಮುದಾಯ ಭವನ, 3ನೇ ಬ್ಲಾಕ್', ety: 'Community Meeting', kty: 'ಸಮುದಾಯ ಸಭೆ', emoji: '💧' },
+      { id: 2, b: '1', et: 'Free Health Camp', kt: 'ಉಚಿತ ಆರೋಗ್ಯ ಶಿಬಿರ', ed: 'Free blood pressure & sugar testing by Victoria Hospital doctors.', kd: 'ವಿಕ್ಟೋರಿಯಾ ಆಸ್ಪತ್ರೆ ವೈದ್ಯರಿಂದ ಉಚಿತ ರಕ್ತ ಪರೀಕ್ಷೆ.', edate: 'Mar 25, 2026', kdate: 'ಮಾ 25, 2026', ev: 'Booth 1 Office', kv: 'ಮತಗಟ್ಟೆ 1 ಕಚೇರಿ', ety: 'Health Camp', kty: 'ಆರೋಗ್ಯ ಶಿಬಿರ', emoji: '🏥' },
+      { id: 3, b: '7', et: 'Youth Sports Day', kt: 'ಯುವ ಕ್ರೀಡಾ ದಿನ', ed: 'Cricket & football tournament for youth aged 14-25.', kd: '14-25 ವಯಸ್ಸಿನ ಯುವಕರಿಗೆ ಕ್ರಿಕೆಟ್ ಮತ್ತು ಫುಟ್ಬಾಲ್.', edate: 'Mar 28, 2026', kdate: 'ಮಾ 28, 2026', ev: 'Basaveshwara Nagar Ground', kv: 'ಬಸವೇಶ್ವರ ನಗರ ಮೈದಾನ', ety: 'Youth Program', kty: 'ಯುವ ಕಾರ್ಯಕ್ರಮ', emoji: '🏏' },
+      { id: 4, b: '5', et: "Women's SHG Monthly Meet", kt: 'ಮಹಿಳಾ ಸ್ವಸಹಾಯ ಗುಂಪಿನ ಸಭೆ', ed: 'Self Help Group monthly financial review and skill session.', kd: 'ಸ್ವಸಹಾಯ ಗುಂಪಿನ ಮಾಸಿಕ ಆರ್ಥಿಕ ಪರಿಶೀಲನೆ.', edate: 'Mar 28, 2026', kdate: 'ಮಾ 28, 2026', ev: 'Vijayanagar Community Centre', kv: 'ವಿಜಯನಗರ ಸಮುದಾಯ ಕೇಂದ್ರ', ety: "Women's Program", kty: 'ಮಹಿಳಾ ಕಾರ್ಯಕ್ರಮ', emoji: '👩' },
+      { id: 5, b: '2', et: 'Voter List Update Drive', kt: 'ಮತದಾರರ ಪಟ್ಟಿ ನವೀಕರಣ', ed: 'Get your name added/corrected in the voter list. Bring Aadhaar.', kd: 'ಮತದಾರರ ಪಟ್ಟಿಯಲ್ಲಿ ಹೆಸರು ಸೇರಿಸಿ.', edate: 'Mar 30, 2026', kdate: 'ಮಾ 30, 2026', ev: 'Booth 2 Premises', kv: 'ಮತಗಟ್ಟೆ 2 ಆವರಣ', ety: 'Civic Drive', kty: 'ನಾಗರಿಕ ಅಭಿಯಾನ', emoji: '🗳️' },
+      { id: 6, b: '4', et: 'Road Infrastructure Meeting', kt: 'ರಸ್ತೆ ಮೂಲಸೌಕರ್ಯ ಸಭೆ', ed: 'Review of pending road repair works in Nagapura.', kd: 'ನಾಗಪುರದ ಬಾಕಿ ರಸ್ತೆ ದುರಸ್ತಿ ಪರಿಶೀಲನೆ.', edate: 'Apr 2, 2026', kdate: 'ಏ 2, 2026', ev: 'Nagapura Ward Office', kv: 'ನಾಗಪುರ ವಾರ್ಡ್ ಕಚೇರಿ', ety: 'Infrastructure', kty: 'ಮೂಲಸೌಕರ್ಯ', emoji: '🛣️' }
+    ];
+
+    var JOBS = [
+      { id: 1, emoji: '📊', type: 'full', et: 'Junior Accountant', kt: 'ಕಿರಿಯ ಲೆಕ್ಕಪರಿಶೋಧಕ', eco: 'Sri Krishna Finance', kco: 'ಶ್ರೀ ಕೃಷ್ಣ ಫೈನಾನ್ಸ್', eloc: 'Rajajinagar', kloc: 'ರಾಜಾಜಿನಗರ', sal: '18,000 - 24,000/month', eexp: '0-2 yrs', kexp: '0-2 ವರ್ಷ', phone: '98765 11111', ed: 'Maintain accounts, GST filing, tally operations.', kd: 'ಖಾತೆ ನಿರ್ವಹಣೆ, GST ಫೈಲಿಂಗ್.' },
+      { id: 2, emoji: '🛵', type: 'part', et: 'Delivery Executive', kt: 'ಡೆಲಿವರಿ ಎಕ್ಸಿಕ್ಯೂಟಿವ್', eco: 'Swiggy / Zomato', kco: 'ಸ್ವಿಗ್ಗಿ / ಝೊಮಾಟೊ', eloc: 'All Bengaluru', kloc: 'ಬೆಂಗಳೂರು', sal: '600 - 1,200/day', eexp: 'Fresher OK', kexp: 'ತಾಜಾ ಸಾಕು', phone: '1800 208 9999', ed: 'Food delivery, flexible hours, own vehicle preferred.', kd: 'ಆಹಾರ ಡೆಲಿವರಿ, ಹೊಂದಿಕೊಳ್ಳುವ ಸಮಯ.' },
+      { id: 3, emoji: '🏦', type: 'full', et: 'Office Assistant', kt: 'ಕಚೇರಿ ಸಹಾಯಕ', eco: 'Rajajinagar Co-op Bank', kco: 'ರಾಜಾಜಿನಗರ ಸಹಕಾರ ಬ್ಯಾಂಕ್', eloc: 'Rajajinagar', kloc: 'ರಾಜಾಜಿನಗರ', sal: '16,000 - 20,000/month', eexp: '0-1 yr', kexp: '0-1 ವರ್ಷ', phone: '080 2222 3333', ed: 'Office filing, data entry, customer assistance.', kd: 'ಕಚೇರಿ ದಾಖಲೆ, ಡೇಟಾ ಎಂಟ್ರಿ.' },
+      { id: 4, emoji: '🧵', type: 'part', et: 'Tailoring Work', kt: 'ಹೊಲಿಗೆ ಕೆಲಸ', eco: 'Textile Unit, 5th Block', kco: 'ಜವಳಿ ಘಟಕ, 5ನೇ ಬ್ಲಾಕ್', eloc: 'Rajajinagar 5th Block', kloc: 'ರಾಜಾಜಿನಗರ 5ನೇ ಬ್ಲಾಕ್', sal: '400 - 700/day', eexp: 'Skilled', kexp: 'ತರಬೇತಿ ಪಡೆದ', phone: '98760 44444', ed: 'Stitching garments, home-based work also available.', kd: 'ಬಟ್ಟೆ ಹೊಲಿಗೆ, ಮನೆಯಿಂದಲೂ ಕೆಲಸ.' },
+      { id: 5, emoji: '🛡️', type: 'full', et: 'Security Guard', kt: 'ಭದ್ರತಾ ಸಿಬ್ಬಂದಿ', eco: 'SafeGuard Pvt Ltd', kco: 'ಸೇಫ್ ಗಾರ್ಡ್ ಪ್ರೈ. ಲಿ.', eloc: 'Rajajinagar', kloc: 'ರಾಜಾಜಿನಗರ', sal: '14,000 - 16,000/month', eexp: 'Fresher OK', kexp: 'ತಾಜಾ ಸಾಕು', phone: '98761 55555', ed: 'Day/night shift security for apartments and offices.', kd: 'ಅಪಾರ್ಟ್ಮೆಂಟ್ ಮತ್ತು ಕಚೇರಿ ಭದ್ರತೆ.' },
+      { id: 6, emoji: '🔧', type: 'part', et: 'Plumber / Electrician', kt: 'ಪ್ಲಂಬರ್ / ವಿದ್ಯುತ್ ತಂತ್ರಜ್ಞ', eco: 'Ward Maintenance Dept', kco: 'ವಾರ್ಡ್ ನಿರ್ವಹಣಾ ವಿಭಾಗ', eloc: 'Rajajinagar Ward', kloc: 'ರಾಜಾಜಿನಗರ ವಾರ್ಡ್', sal: '600 - 1,500/day', eexp: 'Certified', kexp: 'ಪ್ರಮಾಣೀಕೃತ', phone: '080 2223 4444', ed: 'Plumbing and electrical repair work.', kd: 'ನಲ್ಲಿ ಮತ್ತು ವಿದ್ಯುತ್ ದುರಸ್ತಿ.' },
+      { id: 7, emoji: '🌿', type: 'day', et: 'Garden & Cleaning Work', kt: 'ತೋಟ ಮತ್ತು ಸ್ವಚ್ಛತಾ ಕೆಲಸ', eco: 'BBMP Rajajinagar', kco: 'ಬಿಬಿಎಂಪಿ ರಾಜಾಜಿನಗರ', eloc: 'Rajajinagar Parks', kloc: 'ರಾಜಾಜಿನಗರ ಉದ್ಯಾನ', sal: '450 - 550/day', eexp: 'No exp required', kexp: 'ಅನುಭವ ಅಗತ್ಯವಿಲ್ಲ', phone: '1800 425 2225', ed: 'One-day garden maintenance and park cleaning work.', kd: 'ಒಂದು ದಿನದ ಉದ್ಯಾನ ನಿರ್ವಹಣೆ.' },
+      { id: 8, emoji: '🍱', type: 'day', et: 'Catering Help - Event Day', kt: 'ಕ್ಯಾಟರಿಂಗ್ ಸಹಾಯಕ', eco: 'Sri Venkatesha Caterers', kco: 'ಶ್ರೀ ವೆಂಕಟೇಶ ಕ್ಯಾಟರರ್ಸ್', eloc: 'Rajajinagar', kloc: 'ರಾಜಾಜಿನಗರ', sal: '500 - 700/day + meals', eexp: 'No exp required', kexp: 'ಅನುಭವ ಅಗತ್ಯವಿಲ್ಲ', phone: '98762 88888', ed: 'Serving food at events and weddings.', kd: 'ಹಬ್ಬ ಮತ್ತು ಮದುವೆಯಲ್ಲಿ ಊಟ ಬಡಿಸುವ ಕೆಲಸ.' }
+    ];
+
+    var LOCS = [
+      { icon: '🏥', ic: 'ih', enn: 'Victoria Government Hospital', knn: 'ವಿಕ್ಟೋರಿಯಾ ಸರ್ಕಾರಿ ಆಸ್ಪತ್ರೆ', ent: 'Government Hospital', knt: 'ಸರ್ಕಾರಿ ಆಸ್ಪತ್ರೆ', ena: 'K R Market, Bengaluru', kna: 'ಕೆ ಆರ್ ಮಾರ್ಕೆಟ್, ಬೆಂಗಳೂರು', ph: '080 2670 1150', hr: '24/7' },
+      { icon: '🏥', ic: 'ih', enn: 'Rajajinagar PHC', knn: 'ರಾಜಾಜಿನಗರ ಪ್ರಾಥಮಿಕ ಆರೋಗ್ಯ ಕೇಂದ್ರ', ent: 'Primary Health Centre', knt: 'ಪ್ರಾಥಮಿಕ ಆರೋಗ್ಯ ಕೇಂದ್ರ', ena: '3rd Block, Rajajinagar', kna: '3ನೇ ಬ್ಲಾಕ್, ರಾಜಾಜಿನಗರ', ph: '080 2332 1234', hr: 'Mon-Sat 8AM-4PM' },
+      { icon: '🚔', ic: 'ip', enn: 'Rajajinagar Police Station', knn: 'ರಾಜಾಜಿನಗರ ಪೊಲೀಸ್ ಠಾಣೆ', ent: 'Police Station', knt: 'ಪೊಲೀಸ್ ಠಾಣೆ', ena: '15th Cross, Rajajinagar', kna: '15ನೇ ಕ್ರಾಸ್, ರಾಜಾಜಿನಗರ', ph: '100 / 080 2336 2400', hr: '24/7' },
+      { icon: '🚒', ic: 'ih', enn: 'Fire Station - Rajajinagar', knn: 'ಅಗ್ನಿಶಾಮಕ ಠಾಣೆ', ent: 'Fire & Emergency', knt: 'ಅಗ್ನಿಶಾಮಕ ತುರ್ತು', ena: 'Near Chord Road, Rajajinagar', kna: 'ಕಾರ್ಡ್ ರಸ್ತೆ ಬಳಿ, ರಾಜಾಜಿನಗರ', ph: '101 / 080 2225 1234', hr: '24/7' },
+      { icon: '🏫', ic: 'is', enn: 'Govt. High School Rajajinagar', knn: 'ಸರ್ಕಾರಿ ಪ್ರೌಢಶಾಲೆ ರಾಜಾಜಿನಗರ', ent: 'Government School', knt: 'ಸರ್ಕಾರಿ ಶಾಲೆ', ena: '4th Block, Rajajinagar', kna: '4ನೇ ಬ್ಲಾಕ್, ರಾಜಾಜಿನಗರ', ph: '080 2332 5678', hr: 'Mon-Sat 8AM-5PM' },
+      { icon: '💧', ic: 'iw', enn: 'BWSSB Water Supply Office', knn: 'ಬಿಡಬ್ಲ್ಯೂಎಸ್ಎಸ್ಬಿ ನೀರು ಕಚೇರಿ', ent: 'Water & Sanitation', knt: 'ನೀರು ಮತ್ತು ನೈರ್ಮಲ್ಯ', ena: 'Rajajinagar Industrial Area', kna: 'ರಾಜಾಜಿನಗರ ಕೈಗಾರಿಕಾ ಪ್ರದೇಶ', ph: '1916', hr: 'Mon-Sat 9AM-5PM' },
+      { icon: '📮', ic: 'ipo', enn: 'Rajajinagar Post Office', knn: 'ರಾಜಾಜಿನಗರ ಅಂಚೆ ಕಚೇರಿ', ent: 'Post Office', knt: 'ಅಂಚೆ ಕಚೇರಿ', ena: '1st Block, Rajajinagar - 560010', kna: '1ನೇ ಬ್ಲಾಕ್, ರಾಜಾಜಿನಗರ - 560010', ph: '080 2332 0001', hr: 'Mon-Sat 10AM-5PM' },
+      { icon: '🏛️', ic: 'icv', enn: 'BBMP Ward Office', knn: 'ಬಿಬಿಎಂಪಿ ವಾರ್ಡ್ ಕಚೇರಿ', ent: 'Municipal Office', knt: 'ನಗರಸಭಾ ಕಚೇರಿ', ena: 'Rajajinagar Main Road', kna: 'ರಾಜಾಜಿನಗರ ಮುಖ್ಯ ರಸ್ತೆ', ph: '080 2222 0000', hr: 'Mon-Sat 10AM-5PM' },
+      { icon: '🏦', ic: 'ib', enn: 'SBI Branch - Rajajinagar', knn: 'ಎಸ್ಬಿಐ ಶಾಖೆ - ರಾಜಾಜಿನಗರ', ent: 'Government Bank', knt: 'ಸರ್ಕಾರಿ ಬ್ಯಾಂಕ್', ena: '2nd Block, Rajajinagar', kna: '2ನೇ ಬ್ಲಾಕ್, ರಾಜಾಜಿನಗರ', ph: '1800 11 2211', hr: 'Mon-Sat 10AM-4PM' },
+      { icon: '👶', ic: 'ih', enn: 'Anganwadi Health Centre', knn: 'ಅಂಗನವಾಡಿ ಆರೋಗ್ಯ ಕೇಂದ್ರ', ent: 'Mother & Child Care', knt: 'ತಾಯಿ ಮತ್ತು ಮಕ್ಕಳ ಆರೈಕೆ', ena: '7th Block, Rajajinagar', kna: '7ನೇ ಬ್ಲಾಕ್, ರಾಜಾಜಿನಗರ', ph: '080 2334 5678', hr: 'Mon-Fri 9AM-3PM' }
+    ];
+
+    var BQ = [
+      { name: 'Ramesh B.', mob: '98765 43210', cen: 'Water Issue', ckn: 'ನೀರಿನ ಸಮಸ್ಯೆ', ten: 'Morning', tkn: 'ಬೆಳಿಗ್ಗೆ', status: 'new' },
+      { name: 'Anitha S.', mob: '87654 32109', cen: 'Road Repair', ckn: 'ರಸ್ತೆ ದುರಸ್ತಿ', ten: 'Evening', tkn: 'ಸಂಜೆ', status: 'contacted' },
+      { name: 'Vijay K.', mob: '76543 21098', cen: 'Voter ID', ckn: 'ಮತದಾರ ಗುರುತಿನ ಚೀಟಿ', ten: 'Afternoon', tkn: 'ಮಧ್ಯಾಹ್ನ', status: 'resolved' }
+    ];
+    var SAQ = [
+      { b: 'Booth 3', name: 'Ramesh B.', cen: 'Water Issue', ckn: 'ನೀರಿನ ಸಮಸ್ಯೆ', ten: 'Morning', tkn: 'ಬೆಳಿಗ್ಗೆ', st: 'new' },
+      { b: 'Booth 1', name: 'Kavitha R.', cen: 'Road Repair', ckn: 'ರಸ್ತೆ ದುರಸ್ತಿ', ten: 'Evening', tkn: 'ಸಂಜೆ', st: 'contacted' },
+      { b: 'Booth 5', name: 'Manoj T.', cen: 'Employment', ckn: 'ಉದ್ಯೋಗ', ten: 'Noon', tkn: 'ಮಧ್ಯಾಹ್ನ', st: 'new' },
+      { b: 'Booth 7', name: 'Sumitra N.', cen: 'Health', ckn: 'ಆರೋಗ್ಯ', ten: 'Morning', tkn: 'ಬೆಳಿಗ್ಗೆ', st: 'resolved' }
+    ];
+    var BA_EV = [
+      { t: 'Water Supply Meeting', d: 'Mar 22', v: 'Community Hall', c: 'Community Meeting', s: 'Active' },
+      { t: 'Free Health Camp', d: 'Mar 25', v: 'Booth Office', c: 'Health Camp', s: 'Active' },
+      { t: 'Youth Sports Day', d: 'Mar 28', v: 'Ground', c: 'Youth', s: 'Upcoming' }
+    ];
+
+    /* ━━━━━━━━━━━━━━━━ TRANSLATIONS ━━━━━━━━━━━━━━━━ */
+    var TX = {
+      en: {
+        bname: 'Namma Booth Bandu',
+        nav: ['Home', 'Events', 'Jobs', 'Submit Query', 'Help Centers', 'Booths', 'Admin'],
+        navIco: ['🏠', '📅', '💼', '📝', '📍', '🗳️', '🔐'],
+        navPg: ['home', 'events', 'jobs', 'query', 'location', 'booths', 'admin'],
+        ticker: ['Namma Booth Bandu - Rajajinagar Ward Community Platform', 'Ward Development Meeting - Booth 7 - Mar 22', 'New Job Openings - 15 positions this week', 'Voter List Update Drive - All Booths - Mar 30', 'Free Health Camp - Booth 1 - Mar 25'],
+        mlaTag: 'MLA - Rajajinagar Constituency',
+        mlaName: "Sri. S. Suresh Kumar",
+        mlaCo: 'Rajajinagar Constituency - Karnataka Legislative Assembly - BJP',
+        mlaPhL: 'Office', mlaOffL: 'Ward Office',
+        heroT: 'Your Booth. Your Voice. <span>Your Ward.<\/span>',
+        heroD: 'Stay connected with events, job opportunities and your booth representative in Rajajinagar.',
+        sB: 'Active Booths', sM: 'Members', sE: 'Events This Month', sJ: 'Jobs Posted',
+        hB1: 'View Events', hB2: 'Submit Query',
+        findT: 'Find Your Booth', findS: 'Select your booth to see local events and updates',
+        bselL: 'Select Booth Number', hEvBtn: 'View Events',
+        latT: 'Latest Events', latS: 'Recent activities from all booths',
+        evT: 'Ward Events', evS: 'Filter events by booth', evBselL: 'Filter by Booth',
+        jobT: 'Job Opportunities', jobS: 'Full-time, Part-time & One-Day Work for Rajajinagar residents',
+        jtTabs: ['All', 'Full-time', 'Part-time', 'One-Day'], jtKeys: ['all', 'full', 'part', 'day'],
+        jtLabel: { full: 'Full-time', part: 'Part-time', day: 'One-Day' },
+        aLbl: 'Apply Now', cLbl: 'Contact', salL: 'Pay', locL: 'Location', expL: 'Experience',
+        qT: 'Submit Your Query', qS: 'Your booth admin will contact you at your preferred time',
+        qLN: 'Full Name *', qLM: 'Mobile Number *', qLA: 'Full Address *', qLW: 'Ward / Block',
+        qLB: 'Select Booth *', qLC: 'Category', qLMg: 'Your Query *', qLT: 'Preferred Contact Time',
+        qSubmit: 'Submit Query', qOK: 'Query submitted! Your booth admin will contact you soon.',
+        qCats: ['General Enquiry', 'Road / Infrastructure', 'Water & Sanitation', 'Employment Help', 'Health Services', 'Voter ID / Documents'],
+        tSlots: ['Morning (8-11 AM)', 'Noon (11-2 PM)', 'Afternoon (2-5 PM)', 'Evening (5-8 PM)'],
+        locT: 'Public Help Centers', locS: 'Government services and emergency contacts in Rajajinagar',
+        locOpen: { 247: '24x7', other: 'Open' },
+        bthT: 'All Booths - Rajajinagar', bthS: 'Click any booth to see its events',
+        admH: 'Admin Login', admP: 'Sign in as Booth Admin or Super Admin',
+        rtB: 'Booth Admin', rtS: 'Super Admin',
+        admUL: 'Username', admPL: 'Password', admHint: 'Demo: booth / admin123  |  super / super123', admSign: 'Sign In',
+        baH: 'Booth Admin - Booth 3', baP: 'Rajajinagar 3rd Block | Admin: Suresh Kumar', baOut: 'Logout',
+        baSt: ['Members', 'Events', 'Queries', 'Pending'],
+        baTabs: ['Post Event', 'Post Job', 'Member Queries'], baSecIds: ['event', 'job', 'query'],
+        baEvH: 'Post New Event', baETL: 'Event Title', baEDL: 'Date', baEVL: 'Venue', baECL: 'Category', baEDesc: 'Description', baEvPost: 'Post Event',
+        baJobH: 'Post New Job', baJTL: 'Job Title', baJTyL: 'Type', baJCoL: 'Employer / Contact', baJPhL: 'Contact Number', baJSL: 'Pay / Salary', baJLL: 'Location', baJDL: 'Details', baJobPost: 'Post Job',
+        baPQH: 'Add Query on Behalf of Public', baQNL: 'Citizen Name', baQML: 'Mobile', baQAL: 'Address', baQCL: 'Category', baQMsgL: 'Query', baQAdd: 'Add Query',
+        baEvLH: 'Events Posted', baEvTH: ['Event', 'Date', 'Venue', 'Category', 'Status'],
+        baQLH: 'Member Queries', baQTH: ['Name', 'Mobile', 'Category', 'Time', 'Status', 'Action'],
+        slbls: { new: 'New', contacted: 'Contacted', resolved: 'Resolved' },
+        sMC: 'Mark Contacted', sRv: 'Resolve', sDn: 'Done',
+        saH: 'Super Admin Dashboard', saP: 'Rajajinagar Ward - Full Overview', saOut: 'Logout',
+        saSt: ['Booths', 'Members', 'Queries', 'Events', 'Pending', 'Jobs'],
+        saTabs: ['All Booths', 'All Queries', 'Post Event', 'Post Job', 'Announce'],
+        saTabIds: ['booths', 'queries', 'events', 'jobs', 'announce'],
+        saPQH: 'Add Query on Behalf of Public', saQNL: 'Citizen Name', saQML: 'Mobile', saQBL: 'Booth', saQCL: 'Category', saQMsgL: 'Query', saQAdd: 'Add Query',
+        saQLH: 'All Member Queries', saQTH: ['Booth', 'Name', 'Category', 'Time', 'Status'],
+        saEvH: 'Post Ward Event', saETL: 'Event Title', saEDL: 'Date', saEBL: 'Booth / Ward', saECL: 'Category', saEVL: 'Venue', saEDescL: 'Description', saEvPost: 'Post Event',
+        saJobH: 'Post Job Opportunity', saJTL: 'Job Title', saJTyL: 'Type', saJCoL: 'Company / Employer', saJPhL: 'Contact Number', saJSL: 'Pay / Salary', saJLL: 'Location', saJDL: 'Description', saJobPost: 'Post Job',
+        saAnnH: 'Ward Announcement', saATL: 'Title', saATGL: 'Target', saAPL: 'Priority', saAML: 'Message', saAnnSend: 'Send',
+        annTgts: ['All Booths', 'Booth 1', 'Booth 2', 'Booth 3', 'Booth 4', 'Booth 5', 'Booth 6', 'Booth 7', 'Booth 8'],
+        priOpts: ['Normal', 'Urgent'],
+        evCats: ['Community Meeting', 'Health Camp', 'Infrastructure Review', 'Youth Program', "Women's Program", 'Cultural Event'],
+        jTypes: ['Full-time', 'Part-time', 'One-Day'],
+        bw: 'Booth', aw: 'Admin', mw: 'members', ew: 'events', qw: 'queries',
+        ftH: 'Namma Booth Bandu', ftP: 'Connecting citizens with their booth representatives in Rajajinagar, Bengaluru.',
+        ftLinks: 'Quick Links', ftEv: 'Events', ftJobs: 'Jobs', ftQ: 'Submit Query', ftLoc: 'Help Centers', ftB: 'Booth Directory',
+        ftC: 'Ward Office Contact', ftCopy: '2026 Namma Booth Bandu - Rajajinagar Ward BJP | Community Empowerment Platform',
+        emptyEv: 'No events found for selected booth.',
+        aEv: 'Event posted successfully!', aJob: 'Job posted successfully!', aQ: 'Query added on behalf of citizen.', aAnn: 'Announcement sent to all booths!', aLogin: 'Invalid credentials. Use booth/admin123 or super/super123', aFill: 'Please fill all required fields.', aApply: 'We will contact you shortly with details.'
+      },
+      kn: {
+        bname: 'ನಮ್ಮ ಬೂತ್ ಬಂಧು',
+        nav: ['ಮುಖಪುಟ', 'ಕಾರ್ಯಕ್ರಮ', 'ಉದ್ಯೋಗ', 'ಪ್ರಶ್ನೆ ಸಲ್ಲಿಸಿ', 'ಸಹಾಯ ಕೇಂದ್ರ', 'ಮತಗಟ್ಟೆ', 'ನಿರ್ವಾಹಕ'],
+        navIco: ['🏠', '📅', '💼', '📝', '📍', '🗳️', '🔐'],
+        navPg: ['home', 'events', 'jobs', 'query', 'location', 'booths', 'admin'],
+        ticker: ['ನಮ್ಮ ಬೂತ್ ಬಂಧು - ರಾಜಾಜಿನಗರ ವಾರ್ಡ್ ಸಮುದಾಯ ವೇದಿಕೆ', 'ವಾರ್ಡ್ ಅಭಿವೃದ್ಧಿ ಸಭೆ - ಮತಗಟ್ಟೆ 7 - ಮಾ 22', 'ರಾಜಾಜಿನಗರದಲ್ಲಿ ಹೊಸ ಉದ್ಯೋಗ ಅವಕಾಶ', 'ಮತದಾರರ ಪಟ್ಟಿ ನವೀಕರಣ - ಎಲ್ಲ ಮತಗಟ್ಟೆ', 'ಉಚಿತ ಆರೋಗ್ಯ ಶಿಬಿರ - ಮತಗಟ್ಟೆ 1 - ಮಾ 25'],
+        mlaTag: 'ಶಾಸಕ - ರಾಜಾಜಿನಗರ ಕ್ಷೇತ್ರ',
+        mlaName: 'ಶ್ರೀ ಎಸ್. ಸುರೇಶ್ ಕುಮಾರ್',
+        mlaCo: 'ರಾಜಾಜಿನಗರ ಕ್ಷೇತ್ರ - ಕರ್ನಾಟಕ ವಿಧಾನ ಸಭೆ - ಬಿಜೆಪಿ',
+        mlaPhL: 'ಕಚೇರಿ', mlaOffL: 'ವಾರ್ಡ್ ಕಚೇರಿ',
+        heroT: 'ನಿಮ್ಮ ಮತಗಟ್ಟೆ. ನಿಮ್ಮ ಧ್ವನಿ. <span>ನಿಮ್ಮ ವಾರ್ಡ್.<\/span>',
+        heroD: 'ರಾಜಾಜಿನಗರದ ಕಾರ್ಯಕ್ರಮ, ಉದ್ಯೋಗ ಮತ್ತು ಮತಗಟ್ಟೆ ಪ್ರತಿನಿಧಿಯೊಂದಿಗೆ ಸಂಪರ್ಕದಲ್ಲಿರಿ.',
+        sB: 'ಸಕ್ರಿಯ ಮತಗಟ್ಟೆ', sM: 'ಸದಸ್ಯರು', sE: 'ಈ ತಿಂಗಳ ಕಾರ್ಯಕ್ರಮ', sJ: 'ಉದ್ಯೋಗ ಅವಕಾಶ',
+        hB1: 'ಕಾರ್ಯಕ್ರಮ ನೋಡಿ', hB2: 'ಪ್ರಶ್ನೆ ಸಲ್ಲಿಸಿ',
+        findT: 'ನಿಮ್ಮ ಮತಗಟ್ಟೆ ಹುಡುಕಿ', findS: 'ಸ್ಥಳೀಯ ಕಾರ್ಯಕ್ರಮ ನೋಡಲು ಮತಗಟ್ಟೆ ಆಯ್ಕೆ ಮಾಡಿ',
+        bselL: 'ಮತಗಟ್ಟೆ ಸಂಖ್ಯೆ ಆಯ್ಕೆ', hEvBtn: 'ಕಾರ್ಯಕ್ರಮ ನೋಡಿ',
+        latT: 'ಇತ್ತೀಚಿನ ಕಾರ್ಯಕ್ರಮ', latS: 'ಎಲ್ಲ ಮತಗಟ್ಟೆಗಳ ಇತ್ತೀಚಿನ ಚಟುವಟಿಕೆ',
+        evT: 'ವಾರ್ಡ್ ಕಾರ್ಯಕ್ರಮ', evS: 'ಮತಗಟ್ಟೆ ಪ್ರಕಾರ ಫಿಲ್ಟರ್', evBselL: 'ಮತಗಟ್ಟೆ ಆಯ್ಕೆ',
+        jobT: 'ಉದ್ಯೋಗ ಅವಕಾಶ', jobS: 'ಪೂರ್ಣ, ಅರೆ ಮತ್ತು ಒಂದು ದಿನದ ಕೆಲಸ',
+        jtTabs: ['ಎಲ್ಲ', 'ಪೂರ್ಣಕಾಲಿಕ', 'ಅರೆಕಾಲಿಕ', 'ಒಂದು ದಿನ'], jtKeys: ['all', 'full', 'part', 'day'],
+        jtLabel: { full: 'ಪೂರ್ಣಕಾಲಿಕ', part: 'ಅರೆಕಾಲಿಕ', day: 'ಒಂದು ದಿನ' },
+        aLbl: 'ಅರ್ಜಿ ಸಲ್ಲಿಸಿ', cLbl: 'ಸಂಪರ್ಕ', salL: 'ವೇತನ', locL: 'ಸ್ಥಳ', expL: 'ಅನುಭವ',
+        qT: 'ನಿಮ್ಮ ಪ್ರಶ್ನೆ ಸಲ್ಲಿಸಿ', qS: 'ನಿಮ್ಮ ಮತಗಟ್ಟೆ ನಿರ್ವಾಹಕ ನಿಮ್ಮ ಸಮಯದಲ್ಲಿ ಸಂಪರ್ಕಿಸುತ್ತಾರೆ',
+        qLN: 'ಪೂರ್ಣ ಹೆಸರು *', qLM: 'ಮೊಬೈಲ್ ಸಂಖ್ಯೆ *', qLA: 'ಪೂರ್ಣ ವಿಳಾಸ *', qLW: 'ವಾರ್ಡ್ / ಬ್ಲಾಕ್',
+        qLB: 'ಮತಗಟ್ಟೆ ಆಯ್ಕೆ *', qLC: 'ವರ್ಗ', qLMg: 'ನಿಮ್ಮ ಪ್ರಶ್ನೆ *', qLT: 'ಸಂಪರ್ಕ ಸಮಯ',
+        qSubmit: 'ಪ್ರಶ್ನೆ ಸಲ್ಲಿಸಿ', qOK: 'ಪ್ರಶ್ನೆ ಸ್ವೀಕರಿಸಲಾಗಿದೆ! ಮತಗಟ್ಟೆ ನಿರ್ವಾಹಕ ಶೀಘ್ರದಲ್ಲೇ ಸಂಪರ್ಕಿಸುತ್ತಾರೆ.',
+        qCats: ['ಸಾಮಾನ್ಯ ವಿಚಾರಣೆ', 'ರಸ್ತೆ / ಮೂಲಸೌಕರ್ಯ', 'ನೀರು ಮತ್ತು ನೈರ್ಮಲ್ಯ', 'ಉದ್ಯೋಗ ಸಹಾಯ', 'ಆರೋಗ್ಯ ಸೇವೆ', 'ಮತದಾರ ಗುರುತಿನ ಚೀಟಿ'],
+        tSlots: ['ಬೆಳಿಗ್ಗೆ (8-11)', 'ಮಧ್ಯಾಹ್ನ (11-2)', 'ಸಂಜೆ (2-5)', 'ರಾತ್ರಿ (5-8)'],
+        locT: 'ಸಾರ್ವಜನಿಕ ಸಹಾಯ ಕೇಂದ್ರ', locS: 'ರಾಜಾಜಿನಗರದ ಸರ್ಕಾರಿ ಸೇವೆ ಮತ್ತು ತುರ್ತು ಸಂಪರ್ಕ',
+        locOpen: { 247: '24x7', other: 'ತೆರೆದಿದೆ' },
+        bthT: 'ಎಲ್ಲ ಮತಗಟ್ಟೆ - ರಾಜಾಜಿನಗರ', bthS: 'ಕಾರ್ಯಕ್ರಮ ನೋಡಲು ಮತಗಟ್ಟೆ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿ',
+        admH: 'ನಿರ್ವಾಹಕ ಲಾಗಿನ್', admP: 'ಮತಗಟ್ಟೆ ಅಥವಾ ಮೇಲ್ ನಿರ್ವಾಹಕರಾಗಿ ಸೈನ್ ಇನ್ ಮಾಡಿ',
+        rtB: 'ಮತಗಟ್ಟೆ ನಿರ್ವಾಹಕ', rtS: 'ಮೇಲ್ ನಿರ್ವಾಹಕ',
+        admUL: 'ಬಳಕೆದಾರ ಹೆಸರು', admPL: 'ಪಾಸ್ ವರ್ಡ್', admHint: 'ಡೆಮೋ: booth / admin123  |  super / super123', admSign: 'ಸೈನ್ ಇನ್',
+        baH: 'ಮತಗಟ್ಟೆ ನಿರ್ವಾಹಕ - ಮತಗಟ್ಟೆ 3', baP: 'ರಾಜಾಜಿನಗರ 3ನೇ ಬ್ಲಾಕ್ | ನಿರ್ವಾಹಕ: ಸುರೇಶ್ ಕುಮಾರ್', baOut: 'ಲಾಗ್ ಔಟ್',
+        baSt: ['ಸದಸ್ಯರು', 'ಕಾರ್ಯಕ್ರಮ', 'ಪ್ರಶ್ನೆ', 'ಬಾಕಿ'],
+        baTabs: ['ಕಾರ್ಯಕ್ರಮ ಪ್ರಕಟಿಸಿ', 'ಉದ್ಯೋಗ ಪ್ರಕಟಿಸಿ', 'ಸದಸ್ಯರ ಪ್ರಶ್ನೆ'], baSecIds: ['event', 'job', 'query'],
+        baEvH: 'ಹೊಸ ಕಾರ್ಯಕ್ರಮ ಪ್ರಕಟಿಸಿ', baETL: 'ಕಾರ್ಯಕ್ರಮ ಶೀರ್ಷಿಕೆ', baEDL: 'ದಿನಾಂಕ', baEVL: 'ಸ್ಥಳ', baECL: 'ವರ್ಗ', baEDesc: 'ವಿವರಣೆ', baEvPost: 'ಕಾರ್ಯಕ್ರಮ ಪ್ರಕಟಿಸಿ',
+        baJobH: 'ಹೊಸ ಉದ್ಯೋಗ ಪ್ರಕಟಿಸಿ', baJTL: 'ಉದ್ಯೋಗ ಹೆಸರು', baJTyL: 'ವಿಧ', baJCoL: 'ಉದ್ಯೋಗದಾತ', baJPhL: 'ಸಂಪರ್ಕ ಸಂಖ್ಯೆ', baJSL: 'ವೇತನ', baJLL: 'ಸ್ಥಳ', baJDL: 'ವಿವರ', baJobPost: 'ಉದ್ಯೋಗ ಪ್ರಕಟಿಸಿ',
+        baPQH: 'ಸಾರ್ವಜನಿಕರ ಪರವಾಗಿ ಪ್ರಶ್ನೆ ಸೇರಿಸಿ', baQNL: 'ನಾಗರಿಕರ ಹೆಸರು', baQML: 'ಮೊಬೈಲ್', baQAL: 'ವಿಳಾಸ', baQCL: 'ವರ್ಗ', baQMsgL: 'ಪ್ರಶ್ನೆ', baQAdd: 'ಪ್ರಶ್ನೆ ಸೇರಿಸಿ',
+        baEvLH: 'ಪ್ರಕಟಿಸಿದ ಕಾರ್ಯಕ್ರಮ', baEvTH: ['ಕಾರ್ಯಕ್ರಮ', 'ದಿನಾಂಕ', 'ಸ್ಥಳ', 'ವರ್ಗ', 'ಸ್ಥಿತಿ'],
+        baQLH: 'ಸದಸ್ಯರ ಪ್ರಶ್ನೆ', baQTH: ['ಹೆಸರು', 'ಮೊಬೈಲ್', 'ವರ್ಗ', 'ಸಮಯ', 'ಸ್ಥಿತಿ', 'ಕ್ರಿಯೆ'],
+        slbls: { new: 'ಹೊಸ', contacted: 'ಸಂಪರ್ಕ', resolved: 'ಪರಿಹಾರ' },
+        sMC: 'ಸಂಪರ್ಕ ಗುರುತು', sRv: 'ಪರಿಹರಿಸಿ', sDn: 'ಮುಗಿದಿದೆ',
+        saH: 'ಮೇಲ್ ನಿರ್ವಾಹಕ ಡ್ಯಾಶ್ ಬೋರ್ಡ್', saP: 'ರಾಜಾಜಿನಗರ ವಾರ್ಡ್ - ಸಂಪೂರ್ಣ ಅವಲೋಕನ', saOut: 'ಲಾಗ್ ಔಟ್',
+        saSt: ['ಮತಗಟ್ಟೆ', 'ಸದಸ್ಯರು', 'ಪ್ರಶ್ನೆ', 'ಕಾರ್ಯಕ್ರಮ', 'ಬಾಕಿ', 'ಉದ್ಯೋಗ'],
+        saTabs: ['ಎಲ್ಲ ಮತಗಟ್ಟೆ', 'ಎಲ್ಲ ಪ್ರಶ್ನೆ', 'ಕಾರ್ಯಕ್ರಮ ಪ್ರಕಟ', 'ಉದ್ಯೋಗ ಪ್ರಕಟ', 'ಪ್ರಕಟಣೆ'],
+        saTabIds: ['booths', 'queries', 'events', 'jobs', 'announce'],
+        saPQH: 'ಸಾರ್ವಜನಿಕರ ಪರವಾಗಿ ಪ್ರಶ್ನೆ ಸೇರಿಸಿ', saQNL: 'ನಾಗರಿಕರ ಹೆಸರು', saQML: 'ಮೊಬೈಲ್', saQBL: 'ಮತಗಟ್ಟೆ', saQCL: 'ವರ್ಗ', saQMsgL: 'ಪ್ರಶ್ನೆ', saQAdd: 'ಪ್ರಶ್ನೆ ಸೇರಿಸಿ',
+        saQLH: 'ಎಲ್ಲ ಸದಸ್ಯರ ಪ್ರಶ್ನೆ', saQTH: ['ಮತಗಟ್ಟೆ', 'ಹೆಸರು', 'ವರ್ಗ', 'ಸಮಯ', 'ಸ್ಥಿತಿ'],
+        saEvH: 'ವಾರ್ಡ್ ಕಾರ್ಯಕ್ರಮ ಪ್ರಕಟಿಸಿ', saETL: 'ಕಾರ್ಯಕ್ರಮ ಶೀರ್ಷಿಕೆ', saEDL: 'ದಿನಾಂಕ', saEBL: 'ಮತಗಟ್ಟೆ / ವಾರ್ಡ್', saECL: 'ವರ್ಗ', saEVL: 'ಸ್ಥಳ', saEDescL: 'ವಿವರಣೆ', saEvPost: 'ಕಾರ್ಯಕ್ರಮ ಪ್ರಕಟಿಸಿ',
+        saJobH: 'ಉದ್ಯೋಗ ಅವಕಾಶ ಪ್ರಕಟಿಸಿ', saJTL: 'ಉದ್ಯೋಗ ಹೆಸರು', saJTyL: 'ವಿಧ', saJCoL: 'ಕಂಪನಿ / ಉದ್ಯೋಗದಾತ', saJPhL: 'ಸಂಪರ್ಕ ಸಂಖ್ಯೆ', saJSL: 'ವೇತನ', saJLL: 'ಸ್ಥಳ', saJDL: 'ವಿವರಣೆ', saJobPost: 'ಉದ್ಯೋಗ ಪ್ರಕಟಿಸಿ',
+        saAnnH: 'ವಾರ್ಡ್ ಪ್ರಕಟಣೆ', saATL: 'ಶೀರ್ಷಿಕೆ', saATGL: 'ಗುರಿ', saAPL: 'ಆದ್ಯತೆ', saAML: 'ಸಂದೇಶ', saAnnSend: 'ಕಳುಹಿಸಿ',
+        annTgts: ['ಎಲ್ಲ ಮತಗಟ್ಟೆ', 'ಮತಗಟ್ಟೆ 1', 'ಮತಗಟ್ಟೆ 2', 'ಮತಗಟ್ಟೆ 3', 'ಮತಗಟ್ಟೆ 4', 'ಮತಗಟ್ಟೆ 5', 'ಮತಗಟ್ಟೆ 6', 'ಮತಗಟ್ಟೆ 7', 'ಮತಗಟ್ಟೆ 8'],
+        priOpts: ['ಸಾಮಾನ್ಯ', 'ತುರ್ತು'],
+        evCats: ['ಸಮುದಾಯ ಸಭೆ', 'ಆರೋಗ್ಯ ಶಿಬಿರ', 'ಮೂಲಸೌಕರ್ಯ ಪರಿಶೀಲನೆ', 'ಯುವ ಕಾರ್ಯಕ್ರಮ', 'ಮಹಿಳಾ ಕಾರ್ಯಕ್ರಮ', 'ಸಾಂಸ್ಕೃತಿಕ ಕಾರ್ಯಕ್ರಮ'],
+        jTypes: ['ಪೂರ್ಣಕಾಲಿಕ', 'ಅರೆಕಾಲಿಕ', 'ಒಂದು ದಿನ'],
+        bw: 'ಮತಗಟ್ಟೆ', aw: 'ನಿರ್ವಾಹಕ', mw: 'ಸದಸ್ಯರು', ew: 'ಕಾರ್ಯಕ್ರಮ', qw: 'ಪ್ರಶ್ನೆ',
+        ftH: 'ನಮ್ಮ ಬೂತ್ ಬಂಧು', ftP: 'ರಾಜಾಜಿನಗರ, ಬೆಂಗಳೂರಿನ ನಾಗರಿಕರನ್ನು ಮತಗಟ್ಟೆ ಪ್ರತಿನಿಧಿಗಳೊಂದಿಗೆ ಸಂಪರ್ಕಿಸುತ್ತಿದೆ.',
+        ftLinks: 'ತ್ವರಿತ ಲಿಂಕ್', ftEv: 'ಕಾರ್ಯಕ್ರಮ', ftJobs: 'ಉದ್ಯೋಗ', ftQ: 'ಪ್ರಶ್ನೆ ಸಲ್ಲಿಸಿ', ftLoc: 'ಸಹಾಯ ಕೇಂದ್ರ', ftB: 'ಮತಗಟ್ಟೆ ಡೈರೆಕ್ಟರಿ',
+        ftC: 'ವಾರ್ಡ್ ಕಚೇರಿ ಸಂಪರ್ಕ', ftCopy: '2026 ನಮ್ಮ ಬೂತ್ ಬಂಧು - ರಾಜಾಜಿನಗರ ವಾರ್ಡ್ ಬಿಜೆಪಿ',
+        emptyEv: 'ಈ ಮತಗಟ್ಟೆಗೆ ಯಾವುದೇ ಕಾರ್ಯಕ್ರಮ ಕಂಡುಬಂದಿಲ್ಲ.',
+        aEv: 'ಕಾರ್ಯಕ್ರಮ ಯಶಸ್ವಿಯಾಗಿ ಪ್ರಕಟಿಸಲಾಗಿದೆ!', aJob: 'ಉದ್ಯೋಗ ಯಶಸ್ವಿಯಾಗಿ ಪ್ರಕಟಿಸಲಾಗಿದೆ!', aQ: 'ನಾಗರಿಕರ ಪರವಾಗಿ ಪ್ರಶ್ನೆ ಸೇರಿಸಲಾಗಿದೆ.', aAnn: 'ಪ್ರಕಟಣೆ ಕಳುಹಿಸಲಾಗಿದೆ!', aLogin: 'ತಪ್ಪು ರುಜುವಾತು. booth/admin123 ಅಥವಾ super/super123 ಬಳಸಿ', aFill: 'ದಯವಿಟ್ಟು ಎಲ್ಲ ಕಡ್ಡಾಯ ಕ್ಷೇತ್ರ ತುಂಬಿಸಿ.', aApply: 'ನಾವು ಶೀಘ್ರದಲ್ಲೇ ಸಂಪರ್ಕಿಸುತ್ತೇವೆ.'
+      }
+    };
+
+    /* ━━━━━━━━━━━━━━━━ STATE ━━━━━━━━━━━━━━━━ */
+    var L = 'en', adminRole = 'booth', jobFilter = 'all';
+
+    function t(k) { return TX[L][k] || TX.en[k] || ''; }
+    function el(id) { return document.getElementById(id); }
+    function html(id, v) { var e = el(id); if (e) e.innerHTML = v; }
+    function txt(id, v) { var e = el(id); if (e) e.textContent = v; }
+    function ph(id, v) { var e = el(id); if (e) e.placeholder = v; }
+
+    /* ━━━━━━━━━━━━━━━━ LANG ━━━━━━━━━━━━━━━━ */
+    function setLang(lang, btn) {
+      L = lang;
+      document.body.classList.toggle('kn', lang === 'kn');
+      document.querySelectorAll('.lb').forEach(function (b) { b.classList.remove('on'); });
+      btn.classList.add('on');
+      applyAll();
+    }
+
+    /* ━━━━━━━━━━━━━━━━ NAV ━━━━━━━━━━━━━━━━ */
+    function toggleNav() {
+      el('mainNav').classList.toggle('on');
+    }
+
+    function goPage(pg, linkEl) {
+      document.querySelectorAll('.pg').forEach(function (p) { p.classList.remove('on'); });
+      var target = el('pg-' + pg);
+      if (target) target.classList.add('on');
+      document.querySelectorAll('#navUl a').forEach(function (a) { a.classList.remove('on'); });
+      if (linkEl) linkEl.classList.add('on');
+      window.scrollTo(0, 0);
+      el('mainNav').classList.remove('on');
+    }
+
+    function buildNav() {
+      var nav = t('nav'), ico = t('navIco'), pgs = t('navPg');
+      el('navUl').innerHTML = nav.map(function (lbl, i) {
+        return '<li><a href="#" onclick="goPage(\'' + pgs[i] + '\',this);return false">' + ico[i] + ' ' + lbl + '</a></li>';
+      }).join('');
+    }
+
+    /* ━━━━━━━━━━━━━━━━ SELECTS ━━━━━━━━━━━━━━━━ */
+    function buildBoothSelects() {
+      var all = L === 'kn' ? '-- ಎಲ್ಲ ಮತಗಟ್ಟೆ --' : '-- All Booths --';
+      var bw = t('bw');
+      var opts = '<option value="">' + all + '</option>' +
+        BOOTHS.map(function (b) {
+          return '<option value="' + b.n + '">' + bw + ' ' + b.n + ' - ' + (L === 'kn' ? b.kn : b.en) + '</option>';
+        }).join('');
+      ['homeSel', 'evSel', 'qBooth', 'saQBooth', 'saEBooth'].forEach(function (id) {
+        var e = el(id); if (!e) return;
+        var v = e.value; e.innerHTML = opts; e.value = v;
+      });
+    }
+
+    function buildSelect(id, arr) {
+      var e = el(id);
+      if (e) e.innerHTML = arr.map(function (v) { return '<option>' + v + '</option>'; }).join('');
+    }
+
+    function buildSelects() {
+      buildSelect('qCat', t('qCats'));
+      buildSelect('baECat', t('evCats'));
+      buildSelect('saECat', t('evCats'));
+      buildSelect('baQCat', t('qCats'));
+      buildSelect('saQCat', t('qCats'));
+      buildSelect('baJType', t('jTypes'));
+      buildSelect('saJType', t('jTypes'));
+      buildSelect('saAnnTgt', t('annTgts'));
+      buildSelect('saAnnPri', t('priOpts'));
+      // time slots
+      var ts = el('tSlots');
+      if (ts) ts.innerHTML = t('tSlots').map(function (s) {
+        return '<button class="tsl" onclick="toggleSlot(this)">' + s + '</button>';
+      }).join('');
+    }
+
+    /* ━━━━━━━━━━━━━━━━ TICKER ━━━━━━━━━━━━━━━━ */
+    function buildTicker() {
+      var arr = t('ticker');
+      var d = arr.concat(arr);
+      el('tkrEl').innerHTML = d.map(function (s) { return '<span>' + s + '</span>'; }).join('');
+    }
+
+    /* ━━━━━━━━━━━━━━━━ EVENTS ━━━━━━━━━━━━━━━━ */
+    function getFilteredEvents(selId) {
+      var e = el(selId); var v = e ? e.value : '';
+      return v ? EVENTS.filter(function (ev) { return ev.b === v; }) : EVENTS;
+    }
+
+    function renderEventCards(list, containerId, limit) {
+      var c = el(containerId); if (!c) return;
+      var show = limit ? list.slice(0, limit) : list;
+      if (!show.length) { c.innerHTML = '<p class="empty">' + t('emptyEv') + '</p>'; return; }
+      var bw = t('bw');
+      c.innerHTML = show.map(function (ev) {
+        return '<div class="ec">' +
+          '<div class="ec-img">' +
+          '<span class="bb">' + bw + ' ' + ev.b + '</span>' +
+          '<span style="font-size:48px">' + ev.emoji + '</span>' +
+          '</div>' +
+          '<div class="ec-bd">' +
+          '<h3>' + (L === 'kn' ? ev.kt : ev.et) + '</h3>' +
+          '<p>' + (L === 'kn' ? ev.kd : ev.ed) + '</p>' +
+          '<div class="em">' +
+          '<span class="mt mtd">📅 ' + (L === 'kn' ? ev.kdate : ev.edate) + '</span>' +
+          '<span class="mt mtv">📍 ' + (L === 'kn' ? ev.kv : ev.ev) + '</span>' +
+          '<span class="mt mtt">' + (L === 'kn' ? ev.kty : ev.ety) + '</span>' +
+          '</div>' +
+          '</div>' +
+          '</div>';
+      }).join('');
+    }
+
+    function renderEvents() { renderEventCards(getFilteredEvents('evSel'), 'evList', 0); }
+    function homeFilter() { renderEventCards(getFilteredEvents('homeSel'), 'homeEv', 4); }
+
+    /* ━━━━━━━━━━━━━━━━ JOBS ━━━━━━━━━━━━━━━━ */
+    function buildJobTabs() {
+      var tabs = t('jtTabs'), keys = t('jtKeys');
+      el('jobTabs').innerHTML = tabs.map(function (lbl, i) {
+        return '<button class="jtb' + (jobFilter === keys[i] ? ' on' : '') + '" onclick="setJobFilter(\'' + keys[i] + '\')">' + lbl + '</button>';
+      }).join('');
+    }
+
+    function setJobFilter(f) { jobFilter = f; buildJobTabs(); renderJobs(); }
+
+    function renderJobs() {
+      var list = jobFilter === 'all' ? JOBS : JOBS.filter(function (j) { return j.type === jobFilter; });
+      var aL = t('aLbl'), cL = t('cLbl'), sL = t('salL'), lL = t('locL'), eL = t('expL');
+      var lbl = t('jtLabel');
+      el('jobList').innerHTML = list.map(function (j) {
+        var tc = { full: 'jt-f', part: 'jt-p', day: 'jt-d' }[j.type];
+        return '<div class="jc">' +
+          '<div class="ji">' + j.emoji + '</div>' +
+          '<div class="jinfo">' +
+          '<h3>' + (L === 'kn' ? j.kt : j.et) + '</h3>' +
+          '<div class="jco">' + (L === 'kn' ? j.kco : j.eco) + '</div>' +
+          '<span class="jtypb ' + tc + '">' + lbl[j.type] + '</span>' +
+          '<div class="jdet">' +
+          '<div class="jdi">💰 ' + sL + ': <strong>' + j.sal + '</strong></div>' +
+          '<div class="jdi">📍 ' + lL + ': ' + (L === 'kn' ? j.kloc : j.eloc) + '</div>' +
+          '<div class="jdi">🎓 ' + eL + ': ' + (L === 'kn' ? j.kexp : j.eexp) + '</div>' +
+          '<div class="jdi">📞 ' + j.phone + '</div>' +
+          '</div>' +
+          '<p style="font-size:12px;color:var(--mu);margin-bottom:10px">' + (L === 'kn' ? j.kd : j.ed) + '</p>' +
+          '<div class="jact">' +
+          '<button class="abtn" onclick="alert(t(\'aApply\'))">' + aL + '</button>' +
+          '<button class="cbtn" onclick="alert(\'📞 ' + j.phone + '\')">📞 ' + cL + ': ' + j.phone + '</button>' +
+          '</div>' +
+          '</div>' +
+          '</div>';
+      }).join('');
+    }
+
+    /* ━━━━━━━━━━━━━━━━ LOCATIONS ━━━━━━━━━━━━━━━━ */
+    function renderLocations() {
+      var lo = t('locOpen');
+      el('locGrid').innerHTML = LOCS.map(function (loc) {
+        var name = L === 'kn' ? loc.knn : loc.enn;
+        var type = L === 'kn' ? loc.knt : loc.ent;
+        var addr = L === 'kn' ? loc.kna : loc.ena;
+        var is247 = loc.hr === '24/7';
+        var opCls = is247 ? 'lo247' : 'loopen';
+        var opTxt = is247 ? lo['247'] : lo.other;
+        return '<div class="lc">' +
+          '<div class="lh">' +
+          '<div class="lic ' + loc.ic + '">' + loc.icon + '</div>' +
+          '<div><div class="lnm">' + name + '</div><div class="ltp">' + type + '</div></div>' +
+          '</div>' +
+          '<div class="ld">' +
+          '<p>📍 ' + addr + '</p>' +
+          '<p>📞 <a href="tel:' + loc.ph + '">' + loc.ph + '</a></p>' +
+          '<p>🕐 ' + loc.hr + '</p>' +
+          '<span class="lop ' + opCls + '">' + opTxt + '</span>' +
+          '</div>' +
+          '</div>';
+      }).join('');
+    }
+
+    /* ━━━━━━━━━━━━━━━━ BOOTH GRID ━━━━━━━━━━━━━━━━ */
+    function renderBoothGrid(id) {
+      var c = el(id); if (!c) return;
+      var bw = t('bw'), aw = t('aw'), mw = t('mw'), ew = t('ew'), qw = t('qw');
+      c.innerHTML = BOOTHS.map(function (b) {
+        return '<div class="bcard" onclick="gotoBoothEv(\'' + b.n + '\')">' +
+          '<h4>' + bw + ' ' + b.n + '</h4>' +
+          '<p class="bn">' + (L === 'kn' ? b.kn : b.en) + '</p>' +
+          '<p>' + aw + ': ' + (L === 'kn' ? b.akn : b.aen) + '</p>' +
+          '<p>' + b.m + ' ' + mw + ' · ' + b.ev + ' ' + ew + ' · ' + b.q + ' ' + qw + '</p>' +
+          '<div class="bbar"><div class="bfil" style="width:' + Math.min(100, b.m / 2.1) + '%"></div></div>' +
+          '</div>';
+      }).join('');
+    }
+
+    function gotoBoothEv(n) {
+      goPage('events');
+      var s = el('evSel'); if (s) { s.value = n; renderEvents(); }
+    }
+
+    /* ━━━━━━━━━━━━━━━━ ADMIN TABS ━━━━━━━━━━━━━━━━ */
+    function buildBATabs() {
+      var tabs = t('baTabs'), secs = t('baSecIds');
+      el('baTabs').innerHTML = tabs.map(function (lbl, i) {
+        return '<button class="atb' + (i === 0 ? ' on' : '') + '" onclick="baTab(\'' + secs[i] + '\',this)">' + lbl + '</button>';
+      }).join('');
+    }
+
+    function baTab(sec, btn) {
+      document.querySelectorAll('#boothDash .asec').forEach(function (s) { s.classList.remove('on'); });
+      document.querySelectorAll('#baTabs .atb').forEach(function (b) { b.classList.remove('on'); });
+      var s = el('ba-' + sec); if (s) s.classList.add('on');
+      btn.classList.add('on');
+    }
+
+    function buildSATabs() {
+      var tabs = t('saTabs'), ids = t('saTabIds');
+      el('saTabs').innerHTML = tabs.map(function (lbl, i) {
+        return '<button class="satb' + (i === 0 ? ' on' : '') + '" onclick="saTab(\'' + ids[i] + '\',this)">' + lbl + '</button>';
+      }).join('');
+    }
+
+    function saTab(name, btn) {
+      document.querySelectorAll('.sac').forEach(function (c) { c.classList.remove('on'); });
+      document.querySelectorAll('#saTabs .satb').forEach(function (b) { b.classList.remove('on'); });
+      var s = el('sa-' + name); if (s) s.classList.add('on');
+      btn.classList.add('on');
+    }
+
+    /* ━━━━━━━━━━━━━━━━ QUERY TABLES ━━━━━━━━━━━━━━━━ */
+    function renderBaEvTable() {
+      var th = el('baEvTH'), tb = el('baEvTB');
+      if (th) th.innerHTML = t('baEvTH').map(function (h) { return '<th>' + h + '</th>'; }).join('');
+      if (tb) tb.innerHTML = BA_EV.map(function (e) {
+        return '<tr><td>' + e.t + '</td><td>' + e.d + '</td><td>' + e.v + '</td><td>' + e.c + '</td>' +
+          '<td><span class="sb snw">' + e.s + '</span></td></tr>';
+      }).join('');
+    }
+
+    function renderBaQTable() {
+      var th = el('baQTH'), tb = el('baQTB');
+      if (th) th.innerHTML = t('baQTH').map(function (h) { return '<th>' + h + '</th>'; }).join('');
+      var sl = t('slbls'), mc = t('sMC'), rv = t('sRv'), dn = t('sDn');
+      if (tb) tb.innerHTML = BQ.map(function (q, i) {
+        var sc = q.status === 'new' ? 'snw' : q.status === 'contacted' ? 'sco' : 'sre';
+        var btn = q.status === 'new'
+          ? '<button class="abtn" style="font-size:11px;padding:4px 10px" onclick="changeBQ(' + i + ',\'contacted\')">' + mc + '</button>'
+          : q.status === 'contacted'
+            ? '<button class="abtn" style="font-size:11px;padding:4px 10px" onclick="changeBQ(' + i + ',\'resolved\')">' + rv + '</button>'
+            : '<button class="abtn" style="font-size:11px;padding:4px 10px;opacity:.5;cursor:default" disabled>' + dn + '</button>';
+        return '<tr><td>' + q.name + '</td><td>' + q.mob + '</td>' +
+          '<td>' + (L === 'kn' ? q.ckn : q.cen) + '</td>' +
+          '<td>' + (L === 'kn' ? q.tkn : q.ten) + '</td>' +
+          '<td><span class="sb ' + sc + '">' + sl[q.status] + '</span></td>' +
+          '<td>' + btn + '</td></tr>';
+      }).join('');
+    }
+
+    function changeBQ(i, s) { BQ[i].status = s; renderBaQTable(); }
+
+    function renderSAQTable() {
+      var th = el('saQTH'), tb = el('saQTB');
+      if (th) th.innerHTML = t('saQTH').map(function (h) { return '<th>' + h + '</th>'; }).join('');
+      var sl = t('slbls');
+      if (tb) tb.innerHTML = SAQ.map(function (q) {
+        var sc = q.st === 'new' ? 'snw' : q.st === 'contacted' ? 'sco' : 'sre';
+        return '<tr><td style="font-size:12px">' + q.b + '</td><td>' + q.name + '</td>' +
+          '<td>' + (L === 'kn' ? q.ckn : q.cen) + '</td>' +
+          '<td>' + (L === 'kn' ? q.tkn : q.ten) + '</td>' +
+          '<td><span class="sb ' + sc + '">' + sl[q.st] + '</span></td></tr>';
+      }).join('');
+    }
+
+    /* ━━━━━━━━━━━━━━━━ QUERY FORM ━━━━━━━━━━━━━━━━ */
+    function toggleSlot(btn) { btn.classList.toggle('on'); }
+
+    function submitQuery() {
+      if (!el('qN').value || !el('qM').value || !el('qA').value || !el('qBooth').value) {
+        alert(t('aFill')); return;
+      }
+      var toast = el('qToast');
+      toast.textContent = t('qOK');
+      toast.style.display = 'block';
+      setTimeout(function () { toast.style.display = 'none'; }, 5000);
+    }
+
+    /* ━━━━━━━━━━━━━━━━ ADMIN ━━━━━━━━━━━━━━━━ */
+    function setRole(role, btn) {
+      adminRole = role;
+      document.querySelectorAll('.rtb').forEach(function (b) { b.classList.remove('on'); });
+      btn.classList.add('on');
+    }
+
+    function doLogin() {
+      var u = el('aUser').value, p = el('aPass').value;
+      if (adminRole === 'booth' && u === 'booth' && p === 'admin123') {
+        el('admLogin').style.display = 'none';
+        el('boothDash').classList.add('on');
+        renderBaEvTable(); renderBaQTable();
+      } else if (adminRole === 'super' && u === 'super' && p === 'super123') {
+        el('admLogin').style.display = 'none';
+        el('superDash').classList.add('on');
+        renderBoothGrid('saBoothGrid'); renderSAQTable();
+      } else {
+        alert(t('aLogin'));
+      }
+    }
+
+    function doLogout() {
+      el('admLogin').style.display = 'block';
+      el('boothDash').classList.remove('on');
+      el('superDash').classList.remove('on');
+      el('aUser').value = ''; el('aPass').value = '';
+    }
+
+    function admAction(type) {
+      var msgs = { event: t('aEv'), job: t('aJob'), query: t('aQ'), announce: t('aAnn') };
+      alert(msgs[type] || 'Done!');
+    }
+
+    /* ━━━━━━━━━━━━━━━━ APPLY ALL TEXT ━━━━━━━━━━━━━━━━ */
+    function applyAll() {
+      // static IDs
+      var map = {
+        'bname': t('bname'),
+        'mlaTag': '🏛️ ' + t('mlaTag'), 'mlaName': t('mlaName'), 'mlaCo': t('mlaCo'),
+        'mlaPhLbl': t('mlaPhL'), 'mlaOffLbl': t('mlaOffL'),
+        'heroT': t('heroT'), 'heroD': t('heroD'),
+        'sB': t('sB'), 'sM': t('sM'), 'sE': t('sE'), 'sJ': t('sJ'),
+        'hB1': '📅 ' + t('hB1'), 'hB2': '📝 ' + t('hB2'),
+        'findT': '📍 ' + t('findT'), 'findS': t('findS'), 'bselL': t('bselL'), 'hEvBtn': t('hEvBtn'),
+        'latT': '🔥 ' + t('latT'), 'latS': t('latS'),
+        'evT': '📅 ' + t('evT'), 'evS': t('evS'), 'evBselL': t('evBselL'),
+        'jobT': '💼 ' + t('jobT'), 'jobS': t('jobS'),
+        'qT': '📝 ' + t('qT'), 'qS': t('qS'),
+        'qLN': t('qLN'), 'qLM': t('qLM'), 'qLA': t('qLA'), 'qLW': t('qLW'),
+        'qLB': t('qLB'), 'qLC': t('qLC'), 'qLMg': t('qLMg'), 'qLT': t('qLT'),
+        'qSubmit': t('qSubmit'),
+        'locT': '📍 ' + t('locT'), 'locS': t('locS'),
+        'bthT': '🗳️ ' + t('bthT'), 'bthS': t('bthS'),
+        'admH': t('admH'), 'admP': t('admP'), 'rtB': t('rtB'), 'rtS': t('rtS'),
+        'admUL': t('admUL'), 'admPL': t('admPL'), 'admHint': t('admHint'), 'admSign': t('admSign'),
+        'baH': '👤 ' + t('baH'), 'baP': t('baP'), 'baOut': t('baOut'),
+        'baSt1': t('baSt')[0], 'baSt2': t('baSt')[1], 'baSt3': t('baSt')[2], 'baSt4': t('baSt')[3],
+        'baEvH': '📤 ' + t('baEvH'), 'baETL': t('baETL'), 'baEDL': t('baEDL'), 'baEVL': t('baEVL'), 'baECL': t('baECL'), 'baEDesc': t('baEDesc'), 'baEvPost': t('baEvPost'),
+        'baJobH': '➕ ' + t('baJobH'), 'baJTL': t('baJTL'), 'baJTyL': t('baJTyL'), 'baJCoL': t('baJCoL'), 'baJPhL': t('baJPhL'), 'baJSL': t('baJSL'), 'baJLL': t('baJLL'), 'baJDL': t('baJDL'), 'baJobPost': t('baJobPost'),
+        'baPQH': '📝 ' + t('baPQH'), 'baQNL': t('baQNL'), 'baQML': t('baQML'), 'baQAL': t('baQAL'), 'baQCL': t('baQCL'), 'baQMsgL': t('baQMsgL'), 'baQAdd': t('baQAdd'),
+        'baEvLH': '📋 ' + t('baEvLH'), 'baQLH': '📋 ' + t('baQLH'),
+        'saH': '🛡️ ' + t('saH'), 'saP': t('saP'), 'saOut': t('saOut'),
+        'saSt1': t('saSt')[0], 'saSt2': t('saSt')[1], 'saSt3': t('saSt')[2], 'saSt4': t('saSt')[3], 'saSt5': t('saSt')[4], 'saSt6': t('saSt')[5],
+        'saPQH': '📝 ' + t('saPQH'), 'saQNL': t('saQNL'), 'saQML': t('saQML'), 'saQBL': t('saQBL'), 'saQCL': t('saQCL'), 'saQMsgL': t('saQMsgL'), 'saQAdd': t('saQAdd'),
+        'saQLH': t('saQLH'),
+        'saEvH': '📤 ' + t('saEvH'), 'saETL': t('saETL'), 'saEDL': t('saEDL'), 'saEBL': t('saEBL'), 'saECL': t('saECL'), 'saEVL': t('saEVL'), 'saEDescL': t('saEDescL'), 'saEvPost': t('saEvPost'),
+        'saJobH': '➕ ' + t('saJobH'), 'saJTL': t('saJTL'), 'saJTyL': t('saJTyL'), 'saJCoL': t('saJCoL'), 'saJPhL': t('saJPhL'), 'saJSL': t('saJSL'), 'saJLL': t('saJLL'), 'saJDL': t('saJDL'), 'saJobPost': t('saJobPost'),
+        'saAnnH': '📢 ' + t('saAnnH'), 'saATL': t('saATL'), 'saATGL': t('saATGL'), 'saAPL': t('saAPL'), 'saAML': t('saAML'), 'saAnnSend': t('saAnnSend'),
+        'ftH': t('ftH'), 'ftP': t('ftP'), 'ftLinks': t('ftLinks'),
+        'ftEv': t('ftEv'), 'ftJobs': t('ftJobs'), 'ftQ': t('ftQ'), 'ftLoc': t('ftLoc'), 'ftB': t('ftB'),
+        'ftC': t('ftC'), 'ftCopy': '© ' + t('ftCopy')
+      };
+      Object.keys(map).forEach(function (id) { html(id, map[id]); });
+
+      // placeholders
+      ph('qN', L === 'kn' ? 'ನಿಮ್ಮ ಪೂರ್ಣ ಹೆಸರು' : 'Enter your full name');
+      ph('qM', '+91 XXXXX XXXXX');
+      ph('qA', L === 'kn' ? 'ಮನೆ ನಂ., ಬೀದಿ, ಪ್ರದೇಶ' : 'House No, Street, Area');
+      ph('qW', L === 'kn' ? 'ಉದಾ. ರಾಜಾಜಿನಗರ 3ನೇ ಬ್ಲಾಕ್' : 'e.g. Rajajinagar 3rd Block');
+      ph('qMsg', L === 'kn' ? 'ನಿಮ್ಮ ಪ್ರಶ್ನೆ ವಿವರಿಸಿ...' : 'Describe your query in detail...');
+      ph('aUser', L === 'kn' ? 'ಬಳಕೆದಾರ ಹೆಸರು' : 'Enter username');
+      ph('aPass', L === 'kn' ? 'ಪಾಸ್ ವರ್ಡ್' : 'Enter password');
+
+      buildNav();
+      buildBoothSelects();
+      buildSelects();
+      buildTicker();
+      buildJobTabs();
+      buildBATabs();
+      buildSATabs();
+
+      renderEventCards(getFilteredEvents('homeSel'), 'homeEv', 4);
+      renderEvents();
+      renderJobs();
+      renderLocations();
+      renderBoothGrid('boothGrid');
+      renderBoothGrid('saBoothGrid');
+      renderBaEvTable();
+      renderBaQTable();
+      renderSAQTable();
+    }
+
+    /* ━━━━━━━━━━━━━━━━ INIT ━━━━━━━━━━━━━━━━ */
+    applyAll();
+  </script>
+</body>
+
+</html>
