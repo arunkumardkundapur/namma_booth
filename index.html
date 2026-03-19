@@ -1700,11 +1700,13 @@
       }
 
       .nav {
-        display: none
+        display: block;
+        /* change from none → block */
       }
 
-      .nav.on {
-        display: block
+      .nav:not(.on) {
+        display: none;
+        /* only hide when .on is NOT present */
       }
 
       .cg {
